@@ -21,16 +21,14 @@ let battle = {
             "cost":3,
             "scenarios": [
                 {
-                    "message":"$user played his $card into to $opponent's undefended lane, getting off $damage tower damage!",
-                    "damage": 348
+                    "message":"$user played their $card into $opponent's undefended lane, getting off $damage tower damage!",
+                    "damage":348,
+                    "author":"harmiox"
                 },
                 {
-                    "message":"$user played his $card which reached the tower, only $damage tower damage!",
-                    "damage":174
-                },
-                {
-                    "message":"and he reached the tower at full health! Maximum damage!",
-                    "damage":1000
+                    "message":"$user played their $card but $opponent played his mini pekka and defended successfully.",
+                    "damage":0,
+                    "author":"harmiox"
                 }
             ]
         },
@@ -41,8 +39,9 @@ let battle = {
             "cost":3,
             "scenarios": [
                 {
-                    "message":"and they shoot, double damage!",
-                    "damage":234
+                    "message":"",
+                    "damage":0,
+                    "author":""
                 }
             ]
         },
@@ -53,8 +52,9 @@ let battle = {
             "cost":4,
             "scenarios": [
                 {
-                    "message":"but it was wasted.",
-                    "damage":0
+                    "message":"",
+                    "damage":0,
+                    "author":""
                 }
             ]
         },
@@ -65,12 +65,9 @@ let battle = {
             "cost":2,
             "scenarios": [
                 {
-                    "message":"played his $card, but he only got $damage off onto the tower.",
-                    "damage":150
-                },
-                {
-                    "message":"but they were quickly zapped! Zero damage.",
-                    "damage":0
+                    "message":"",
+                    "damage":0,
+                    "author":""
                 }
             ]
         },
@@ -81,8 +78,9 @@ let battle = {
             "cost":3,
             "scenarios": [
                 {
-                    "message":"played his $card and he landed two hits, getting off $damage damage to the tower!",
-                    "damage":542
+                    "message":"",
+                    "damage":0,
+                    "author":""
                 }
             ]
         },
@@ -93,16 +91,9 @@ let battle = {
             "cost":2,
             "scenarios": [
                 {
-                    "message":"played $card and all $card quickly got a stab in!",
-                    "damage":318
-                },
-                {
-                    "message":"played $card but only two $card got a stab in.",
-                    "damage":212
-                },
-                {
-                    "message":"palyed $card but only one $card got a stab in.",
-                    "damage":106
+                    "message":"",
+                    "damage":0,
+                    "author":""
                 }
             ]
         },
@@ -113,8 +104,9 @@ let battle = {
             "cost":5,
             "scenarios": [
                 {
-                    "message":"but the horde got zapped, and only one minion reached the tower.",
-                    "damage":84
+                    "message":"",
+                    "damage":0,
+                    "author":""
                 }
             ]
         },
@@ -125,8 +117,9 @@ let battle = {
             "cost":1,
             "scenarios": [
                 {
-                    "message":"but the doots were burned by incoming fire spirits. Zero damage.",
-                    "damage":0
+                    "message":"",
+                    "damage":0,
+                    "author":""
                 }
             ]
         },
@@ -137,8 +130,9 @@ let battle = {
             "cost":3,
             "scenarios": [
                 {
-                    "message":"and all three minions landed two hits!",
-                    "damage":504
+                    "message":"",
+                    "damage":0,
+                    "author":""
                 }
             ]
         },
@@ -149,12 +143,9 @@ let battle = {
             "cost":5,
             "scenarios": [
                 {
-                    "message":"and all four barbarians hit the tower twice!",
-                    "damage":1056
-                },
-                {
-                    "message":"but they were fireballed, and only one barbarian got a hit.",
-                    "damage":159
+                    "message":"",
+                    "damage":0,
+                    "author":""
                 }
             ]
         },
@@ -165,16 +156,9 @@ let battle = {
             "cost":2,
             "scenarios": [
                 {
-                    "message":"but two spirits took out a minion horde, so only the last spirit hit the tower.",
-                    "damage":169
-                },
-                {
-                    "message":"and all three spirits hit the tower!",
-                    "damage":507
-                },
-                {
-                    "message":"but one of the spirits got zapped, so only two hit the tower.",
-                    "damage":338
+                    "message":"",
+                    "damage":0,
+                    "author":""
                 }
             ]
         },
@@ -185,12 +169,9 @@ let battle = {
             "cost":6,
             "scenarios": [
                 {
-                    "message":"and the $card is able to land five shots!",
-                    "damage":795
-                },
-                {
-                    "message":"but an ice wizard was slowing down the $card, so he only landed two shots.",
-                    "damage":318
+                    "message":"",
+                    "damage":0,
+                    "author":""
                 }
             ]
         },
@@ -201,12 +182,9 @@ let battle = {
             "cost":6,
             "scenarios": [
                 {
-                    "message":"and not only did the brothers reach the tower, they got raged!",
-                    "damage":1524
-                },
-                {
-                    "message":"but one elite barbarian fell into the river. The remaining one got two hits off.",
-                    "damage":508
+                    "message":"",
+                    "damage":0,
+                    "author":""
                 }
             ]
         },
@@ -217,12 +195,9 @@ let battle = {
             "cost":1,
             "scenarios": [
                 {
-                    "message":"and the ice spirit gleefully landed on the tower.",
-                    "damage":95
-                },
-                {
-                    "message":"but a wizard burned the spirit! Zero damage.",
-                    "damage":0
+                    "message":"",
+                    "damage":0,
+                    "author":""
                 }
             ]
         },
@@ -233,16 +208,9 @@ let battle = {
             "cost":3,
             "scenarios": [
                 {
-                    "message":"but the gang was unfortunately crushed by the log. Zero damage.",
-                    "damage":0
-                },
-                {
-                    "message":"but only the spear goblins made it to the tower. All three got two hits in.",
-                    "damage":300
-                },
-                {
-                    "message":"but only the stab goblins made it to the tower. All three got two hits in.",
-                    "damage":636
+                    "message":"",
+                    "damage":0,
+                    "author":""
                 }
             ]
         },
@@ -253,12 +221,9 @@ let battle = {
             "cost":3,
             "scenarios": [
                 {
-                    "message":"and it successfully clipped the tower!",
-                    "damage":98
-                },
-                {
-                    "message":"but it missed! Zero damage.",
-                    "damage":0
+                    "message":"",
+                    "damage":0,
+                    "author":""
                 }
             ]
         },
@@ -269,8 +234,9 @@ let battle = {
             "cost":2,
             "scenarios": [
                 {
-                    "message":"and not only did it kill an incoming skeleton army, it clipped the tower!",
-                    "damage":159
+                    "message":"",
+                    "damage":0,
+                    "author":""
                 }
             ]
         },
@@ -281,8 +247,9 @@ let battle = {
             "cost":3,
             "scenarios": [
                 {
-                    "message":"and it successfully defended a hog rider push!",
-                    "damage":0
+                    "message":"",
+                    "damage":0,
+                    "author":""
                 }
             ]
         },
@@ -293,8 +260,9 @@ let battle = {
             "cost":4,
             "scenarios": [
                 {
-                    "message":"and it popped out of the ground, which distracted a royal giant!",
-                    "damage":0
+                    "message":"!",
+                    "damage":0,
+                    "author":""
                 }
             ]
         },
@@ -305,12 +273,9 @@ let battle = {
             "cost":4,
             "scenarios": [
                 {
-                    "message":"and it successfully hits the tower 4 times!",
-                    "damage":916
-                },
-                {
-                    "message":"and it successfully hits the tower 2 times!",
-                    "damage":458
+                    "message":"",
+                    "damage":0,
+                    "author":""
                 }
             ]
         }
