@@ -25,7 +25,7 @@ let battle = {
                     "damage": 348
                 },
                 {
-                    "message":"played his $card which reached the tower, only $damage tower damage!",
+                    "message":"$user played his $card which reached the tower, only $damage tower damage!",
                     "damage":174
                 },
                 {
