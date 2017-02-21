@@ -21,11 +21,11 @@ let battle = {
             "cost":3,
             "scenarios": [
                 {
-                    "message":"and he reached the tower getting two swings off!",
+                    "message":"$user played his $card into to $opponent's undefended lane, getting off $damage tower damage!",
                     "damage": 348
                 },
                 {
-                    "message":"and he reached the tower but only gets one swing off.",
+                    "message":"played his $card which reached the tower, only $damage tower damage!",
                     "damage":174
                 },
                 {
@@ -65,7 +65,7 @@ let battle = {
             "cost":2,
             "scenarios": [
                 {
-                    "message":"and they reached the tower, but only got to throw their spears once.",
+                    "message":"played his $card, but he only got $damage off onto the tower.",
                     "damage":150
                 },
                 {
@@ -81,7 +81,7 @@ let battle = {
             "cost":3,
             "scenarios": [
                 {
-                    "message":"and he landed two hits!",
+                    "message":"played his $card and he landed two hits, getting off $damage damage to the tower!",
                     "damage":542
                 }
             ]
@@ -93,15 +93,15 @@ let battle = {
             "cost":2,
             "scenarios": [
                 {
-                    "message":"and all three goblins quickly got a stab in!",
+                    "message":"played $card and all $card quickly got a stab in!",
                     "damage":318
                 },
                 {
-                    "message":"but only two goblins got a stab in.",
+                    "message":"played $card but only two $card got a stab in.",
                     "damage":212
                 },
                 {
-                    "message":"but only one goblin got a stab in.",
+                    "message":"palyed $card but only one $card got a stab in.",
                     "damage":106
                 }
             ]
@@ -115,10 +115,6 @@ let battle = {
                 {
                     "message":"but the horde got zapped, and only one minion reached the tower.",
                     "damage":84
-                },
-                {
-                    "message":"but the horde got arrowed! Zero damage.",
-                    "damage":0
                 }
             ]
         },
@@ -130,10 +126,6 @@ let battle = {
             "scenarios": [
                 {
                     "message":"but the doots were burned by incoming fire spirits. Zero damage.",
-                    "damage":0
-                },
-                {
-                    "message":"but Larry got lost, so the other doots looked for him. Zero damage.",
                     "damage":0
                 }
             ]
@@ -193,11 +185,11 @@ let battle = {
             "cost":6,
             "scenarios": [
                 {
-                    "message":"and the royal giant is able to land five shots!",
+                    "message":"and the $card is able to land five shots!",
                     "damage":795
                 },
                 {
-                    "message":"but an ice wizard was slowing down the royal giant, so he only landed two shots",
+                    "message":"but an ice wizard was slowing down the $card, so he only landed two shots.",
                     "damage":318
                 }
             ]
@@ -208,10 +200,6 @@ let battle = {
             "rarity": "common",
             "cost":6,
             "scenarios": [
-                {
-                    "message":"but the elite barbarians were shut down by an electro wizard. Zero damage.",
-                    "damage":0
-                },
                 {
                     "message":"and not only did the brothers reach the tower, they got raged!",
                     "damage":1524
@@ -229,7 +217,7 @@ let battle = {
             "cost":1,
             "scenarios": [
                 {
-                    "message":"and the ice spirit gleefully landed on the tower",
+                    "message":"and the ice spirit gleefully landed on the tower.",
                     "damage":95
                 },
                 {
@@ -295,10 +283,6 @@ let battle = {
                 {
                     "message":"and it successfully defended a hog rider push!",
                     "damage":0
-                },
-                {
-                    "message":"but it was deployed too far! A giant got two hits in.",
-                    "damage":0
                 }
             ]
         },
@@ -343,7 +327,7 @@ function switchPlayer() {
     if (current === 0) {
         current = 1;
         opponent = 0;
-    } else {
+    } else if (current === 1) {
         current = 0;
         opponent = 1;
     }
@@ -389,12 +373,27 @@ function friendlyBattle(msg) {
             chooseCard();
             chooseScenario();
             battle.towers["king tower"][opponent] -= scenario.damage;
-            if (battle.towers["king tower"][opponent] <= 0) {
-                moves.push("**" + players[current].username + "** played their " + card.name + " " + scenario.message + " (" + scenario.damage + "dmg | " + battle.towers["king tower"][opponent] + "hp)\n**" + players[current] + " three crowned " + players[opponent] + "!**");
+            let attacker = players[current].username;
+            let defender = players[opponent].username;
+            let damage = scenario.damage;
+            let name = card.name;
+            let hp = battle.towers["king tower"][opponent];
+            let message = scenario.message.replace(/\$user/g,(`**${attacker}**`)).replace(/\$card/g,(`**${name}**`)).replace(/\$opponent/g,(`**${defender}**`)).replace(/\$damage/g,(`**${damage}**`));
+            if (moves.length <= 16) {
+                if (moves.length === 8) {
+                    moves.push("**__Overtime!__**");
+                }
+                if (battle.towers["king tower"][opponent] <= 0) {
+                    moves.push(`${message} **(${defender}: ${hp}hp)**`);
+                    moves.push(`**${attacker} three crowned ${defender} !**`);
+                } else {
+                    moves.push(`${message} **(${defender}: ${hp}hp)**`);
+                    switchPlayer();
+                }
             } else {
-                moves.push("**" + players[current].username + "** played their " + card.name + " " + scenario.message + " (" + scenario.damage + "dmg | " + battle.towers["king tower"][opponent] + "hp)");
-            }
-            switchPlayer();
+                moves.push("**__Time ran out, the match ended in a draw!__**");
+                break;
+            }    
         }
         let gameInterval = setInterval(()=>{
             let nextMove = moves.shift();
