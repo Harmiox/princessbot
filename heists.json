@@ -1,0 +1,393 @@
+{
+	"active": 0,
+	"current": 5,
+	"heists": [
+		{
+			"id": 0,
+			"successful": 0,
+			"paid": 0,
+			"due": 0,
+			"payment": 0,
+			"crew": [
+				{
+					"id": "228781414986809344",
+					"username": "Harmiox",
+					"discriminator": "3378",
+					"avatar": "5848bd3634d28ac345ad3b4d4c08a226",
+					"bot": false,
+					"lastMessageID": "282747059637977099"
+				},
+				{
+					"id": "198521570233286657",
+					"username": "John Cena",
+					"discriminator": "0303",
+					"avatar": "8ed3424833ca1f08f8c9b8ff03be47d3",
+					"bot": false,
+					"lastMessageID": "282747137601699852"
+				},
+				{
+					"id": "261266292663648256",
+					"username": "Deep",
+					"discriminator": "7441",
+					"avatar": "ec784b09623bd7ce9dcddeaee48b3c7e",
+					"bot": false,
+					"lastMessageID": "282747145327476740"
+				},
+				{
+					"id": "138392077405782017",
+					"username": "⎛⎝pyNaCl⎠⎞",
+					"discriminator": "0346",
+					"avatar": "c1144ab4ad1fdc168c954a024af21cc6",
+					"bot": false,
+					"lastMessageID": "282747166693523466"
+				},
+				{
+					"id": "230378021507301376",
+					"username": "SpeedLegend🐄",
+					"discriminator": "3629",
+					"avatar": "2d739226472883a3962ea4ef9c4333f7",
+					"bot": false,
+					"lastMessageID": "282747170157756427"
+				}
+			],
+			"winners": [],
+			"losers": []
+		},
+		{
+			"id": 1,
+			"successful": 1,
+			"paid": 1687500,
+			"due": 1687500,
+			"payment": 1687500,
+			"crew": [
+				{
+					"id": "138392077405782017",
+					"username": "⎛⎝pyNaCl⎠⎞",
+					"discriminator": "0346",
+					"avatar": "c1144ab4ad1fdc168c954a024af21cc6",
+					"bot": false,
+					"lastMessageID": "282747532940148737"
+				},
+				{
+					"id": "198521570233286657",
+					"username": "John Cena",
+					"discriminator": "0303",
+					"avatar": "8ed3424833ca1f08f8c9b8ff03be47d3",
+					"bot": false,
+					"lastMessageID": "282747534131331072"
+				},
+				{
+					"id": "261266292663648256",
+					"username": "Deep",
+					"discriminator": "7441",
+					"avatar": "ec784b09623bd7ce9dcddeaee48b3c7e",
+					"bot": false,
+					"lastMessageID": "282747540548354048"
+				},
+				{
+					"id": "199151432522399744",
+					"username": "Adnan",
+					"discriminator": "8203",
+					"avatar": "6ae5ef616a37354064656cb079704d70",
+					"bot": false,
+					"lastMessageID": "282747544855904276"
+				},
+				{
+					"id": "230378021507301376",
+					"username": "SpeedLegend🐄",
+					"discriminator": "3629",
+					"avatar": "2d739226472883a3962ea4ef9c4333f7",
+					"bot": false,
+					"lastMessageID": "282747555111239683"
+				},
+				{
+					"id": "280071867161772053",
+					"username": "OGmanman",
+					"discriminator": "5011",
+					"avatar": "8990f46b2fbcc526a7d7c5e434e493c3",
+					"bot": false,
+					"lastMessageID": "282747620139466752"
+				},
+				{
+					"id": "226720625329176576",
+					"username": "Absolutezero01",
+					"discriminator": "2024",
+					"avatar": "3fc801d539699294c976a61caa055667",
+					"bot": false,
+					"lastMessageID": "282747656864792578"
+				}
+			],
+			"winners": [
+				{
+					"id": "138392077405782017",
+					"username": "⎛⎝pyNaCl⎠⎞",
+					"discriminator": "0346",
+					"avatar": "c1144ab4ad1fdc168c954a024af21cc6",
+					"bot": false,
+					"lastMessageID": "282747532940148737"
+				}
+			],
+			"losers": [
+				{
+					"id": "198521570233286657",
+					"username": "John Cena",
+					"discriminator": "0303",
+					"avatar": "8ed3424833ca1f08f8c9b8ff03be47d3",
+					"bot": false,
+					"lastMessageID": "282747534131331072"
+				},
+				{
+					"id": "261266292663648256",
+					"username": "Deep",
+					"discriminator": "7441",
+					"avatar": "ec784b09623bd7ce9dcddeaee48b3c7e",
+					"bot": false,
+					"lastMessageID": "282747540548354048"
+				},
+				{
+					"id": "199151432522399744",
+					"username": "Adnan",
+					"discriminator": "8203",
+					"avatar": "6ae5ef616a37354064656cb079704d70",
+					"bot": false,
+					"lastMessageID": "282747544855904276"
+				},
+				{
+					"id": "230378021507301376",
+					"username": "SpeedLegend🐄",
+					"discriminator": "3629",
+					"avatar": "2d739226472883a3962ea4ef9c4333f7",
+					"bot": false,
+					"lastMessageID": "282747555111239683"
+				},
+				{
+					"id": "280071867161772053",
+					"username": "OGmanman",
+					"discriminator": "5011",
+					"avatar": "8990f46b2fbcc526a7d7c5e434e493c3",
+					"bot": false,
+					"lastMessageID": "282747620139466752"
+				},
+				{
+					"id": "226720625329176576",
+					"username": "Absolutezero01",
+					"discriminator": "2024",
+					"avatar": "3fc801d539699294c976a61caa055667",
+					"bot": false,
+					"lastMessageID": "282747656864792578"
+				}
+			]
+		},
+		{
+			"id": 2,
+			"successful": 0,
+			"paid": 0,
+			"due": 0,
+			"payment": 0,
+			"crew": [
+				{
+					"id": "249426027489656853",
+					"username": "AlphaTiger07",
+					"discriminator": "9000",
+					"avatar": "c23081cd5d2eea2640bcb31fbb9b26c8",
+					"bot": false,
+					"lastMessageID": "282747939640705025"
+				}
+			],
+			"winners": [],
+			"losers": []
+		},
+		{
+			"id": 3,
+			"successful": 0,
+			"paid": 0,
+			"due": 0,
+			"payment": 0,
+			"crew": [
+				{
+					"id": "271860752699228170",
+					"username": "Redecon",
+					"discriminator": "4749",
+					"avatar": null,
+					"bot": false,
+					"lastMessageID": "282748143387410433"
+				},
+				{
+					"id": "265662276537679873",
+					"username": "Godkiller827",
+					"discriminator": "3281",
+					"avatar": "6d496cd93f8916730f24b8f18ba9bd1a",
+					"bot": false,
+					"lastMessageID": "282748153944604672"
+				},
+				{
+					"id": "277404740852121601",
+					"username": "IllegalNuts23",
+					"discriminator": "6384",
+					"avatar": "47aefaf252570f85d5b30083f3332c21",
+					"bot": false,
+					"lastMessageID": "282748193379450890"
+				},
+				{
+					"id": "185202694464602121",
+					"username": "Redwood",
+					"discriminator": "5266",
+					"avatar": "efd71c530a1a8199f1151b2614ddc7d7",
+					"bot": false,
+					"lastMessageID": "282748194264317952"
+				},
+				{
+					"id": "262399822319845376",
+					"username": "DogLover <3",
+					"discriminator": "1838",
+					"avatar": "ff032b07ae366b2ac84aee8636b2ecd6",
+					"bot": false,
+					"lastMessageID": "282748204951273472"
+				},
+				{
+					"id": "249426027489656853",
+					"username": "AlphaTiger07",
+					"discriminator": "9000",
+					"avatar": "c23081cd5d2eea2640bcb31fbb9b26c8",
+					"bot": false,
+					"lastMessageID": "282748214686515201"
+				},
+				{
+					"id": "262730607174483978",
+					"username": "DatBoi23",
+					"discriminator": "0420",
+					"avatar": null,
+					"bot": false,
+					"lastMessageID": "282748216716296192"
+				},
+				{
+					"id": "179198213226496000",
+					"username": "Higashikata",
+					"discriminator": "2184",
+					"avatar": "6d5c7f783a46824abbebc2ddb6372680",
+					"bot": false,
+					"lastMessageID": "282748219664891907"
+				},
+				{
+					"id": "280085782302294026",
+					"username": "popeye",
+					"discriminator": "9179",
+					"avatar": "8dd090f3444f9a1c1ee7013f15962774",
+					"bot": false,
+					"lastMessageID": "282748232482947072"
+				},
+				{
+					"id": "158789958948225024",
+					"username": "Soap",
+					"discriminator": "7728",
+					"avatar": "6d5a853300c9dbd42b44d00d500048a1",
+					"bot": false,
+					"lastMessageID": "282748239650881536"
+				},
+				{
+					"id": "280073087892979722",
+					"username": "Dr Mario",
+					"discriminator": "3297",
+					"avatar": "3498167529f843182738c94b3160a6c1",
+					"bot": false,
+					"lastMessageID": "282748248928681984"
+				},
+				{
+					"id": "262734098123063296",
+					"username": "XxHerobrinexX",
+					"discriminator": "9923",
+					"avatar": "36caed44fd06d908fb613bacf1981a4b",
+					"bot": false,
+					"lastMessageID": "282748253336895488"
+				},
+				{
+					"id": "262729918276829184",
+					"username": "DungeonMaster64",
+					"discriminator": "7225",
+					"avatar": "bb29650830851b2240c7b81a78347162",
+					"bot": false,
+					"lastMessageID": "282748266188111872"
+				}
+			],
+			"winners": [],
+			"losers": []
+		},
+		{
+			"id": 4,
+			"successful": 1,
+			"paid": 264108,
+			"due": 264108.75,
+			"payment": 264108,
+			"crew": [
+				{
+					"id": "262732976662511616",
+					"username": "LotusPro",
+					"discriminator": "8037",
+					"avatar": "b1699477be8a12f2216c48a35988da03",
+					"bot": false,
+					"lastMessageID": "282748716136267788"
+				},
+				{
+					"id": "262731259715911681",
+					"username": "LootLord",
+					"discriminator": "3538",
+					"avatar": "a2a6b815543627ff4651fec99f8d1ed5",
+					"bot": false,
+					"lastMessageID": "282748756645117953"
+				},
+				{
+					"id": "262399330609004545",
+					"username": "TheDude1994",
+					"discriminator": "7783",
+					"avatar": "d3a8023c3d48502b7cd3dc0b8c8bbed8",
+					"bot": false,
+					"lastMessageID": "282748791549853706"
+				},
+				{
+					"id": "230378021507301376",
+					"username": "SpeedLegend🐄",
+					"discriminator": "3629",
+					"avatar": "2d739226472883a3962ea4ef9c4333f7",
+					"bot": false,
+					"lastMessageID": "282748832414957568"
+				}
+			],
+			"winners": [
+				{
+					"id": "230378021507301376",
+					"username": "SpeedLegend🐄",
+					"discriminator": "3629",
+					"avatar": "2d739226472883a3962ea4ef9c4333f7",
+					"bot": false,
+					"lastMessageID": "282748832414957568"
+				}
+			],
+			"losers": [
+				{
+					"id": "262732976662511616",
+					"username": "LotusPro",
+					"discriminator": "8037",
+					"avatar": "b1699477be8a12f2216c48a35988da03",
+					"bot": false,
+					"lastMessageID": "282748716136267788"
+				},
+				{
+					"id": "262731259715911681",
+					"username": "LootLord",
+					"discriminator": "3538",
+					"avatar": "a2a6b815543627ff4651fec99f8d1ed5",
+					"bot": false,
+					"lastMessageID": "282748756645117953"
+				},
+				{
+					"id": "262399330609004545",
+					"username": "TheDude1994",
+					"discriminator": "7783",
+					"avatar": "d3a8023c3d48502b7cd3dc0b8c8bbed8",
+					"bot": false,
+					"lastMessageID": "282748791549853706"
+				}
+			]
+		}
+	]
+}

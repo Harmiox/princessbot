@@ -1,0 +1,10 @@
+{
+	"commands": {
+		"battle": {
+			"cooldown": false,
+			"roles_allowed": {},
+			"users_denied": {},
+			"channels_denied": {}
+		}	
+	}
+}

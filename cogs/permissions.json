@@ -1,0 +1,80 @@
+{
+	"commands": {
+		"bot": {
+			"cooldown": 0,
+			"roles_allowed": {},
+			"users_denied": {},
+			"channels_denied": {}
+		},
+		"chest": {
+			"cooldown": 0,
+			"roles_allowed": {
+				"179663287800168448": "Bot"
+			},
+			"users_denied": {},
+			"channels_denied": {}
+		},
+		"chest open": {
+			"cooldown": 0,
+			"roles_allowed": {
+				"179663287800168448": "Bot"
+			},
+			"users_denied": {},
+			"channels_denied": {}
+		},
+		"chest transfer": {
+			"cooldown": 0,
+			"roles_allowed": {},
+			"users_denied": {},
+			"channels_denied": {}
+		},
+		"chest set": {
+			"cooldown": 0,
+			"roles_allowed": {},
+			"users_denied": {},
+			"channels_denied": {}
+		},
+		"chest add": {
+			"cooldown": 0,
+			"roles_allowed": {},
+			"users_denied": {},
+			"channels_denied": {}
+		},
+		"chest delete": {
+			"cooldown": 0,
+			"roles_allowed": {},
+			"users_denied": {},
+			"channels_denied": {}
+		},
+		"freechest": {
+			"cooldown": 14400,
+			"roles_allowed": {
+				"179663287800168448": "Bot"
+			},
+			"users_denied": {},
+			"channels_denied": {
+				"282653334563717123": "goblin-hut"
+			}
+		},
+		"battle": {
+			"cooldown": 30,
+			"roles_allowed": {},
+			"users_denied": {},
+			"channels_denied": {
+				"273773402572062721": "general"
+			}
+		}
+	},
+	"cooldowns": {
+		"freechest": {
+			"228781414986809344": "2017-02-20T18:18:28.732Z",
+			"145215019288756224": "2017-02-19T09:07:13.629Z",
+			"195612311174643713": "2017-02-19T09:55:54.165Z",
+			"226720625329176576": "2017-02-19T09:55:57.668Z"
+		},
+		"battle": {
+			"228781414986809344": "2017-02-21T02:40:18.739Z",
+			"255764664938528784": "2017-02-21T02:41:37.041Z"
+		}
+	}
+}

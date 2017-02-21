@@ -1,0 +1,7 @@
+{
+	"cogs": {
+		"economy.js": true,
+		"permissions.js": true,
+		"battles.js": true
+	}
+}
