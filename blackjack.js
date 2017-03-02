@@ -18,7 +18,7 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
 
-var drawHand = function () {
+Function drawHand() {
     var cards = new Array("A", "J", "Q", "K");
     
 
