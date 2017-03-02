@@ -2,8 +2,8 @@ const db = require('sqlite');;
 function getCommands() {
     let commands = {
         "blackjack": {
-			"description": "`!blackjack <//TODO>`",
-		}
+            "description": "`!blackjack <//TODO>`",
+        }
     }
     return commands;
 }
@@ -12,21 +12,52 @@ function getCommands() {
 
 //TODO Functions
 
-var fun = function() {
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min)) + min;
+}
+
+var drawHand = function () {
+    var cards = new Array("A", "J", "Q", "K");
+    
+
+    return "A" + " " + "A";
+}
+
+var blackjack = function () {
     var self = this;
-    self.onMsg = function(cmd,msg) {
-        //TODO Commands
-        if (cmd === "????") {
-            //TODO Stuff
+    self.onMsg = function (cmd, msg) {
+        if (cmd === "!sit" || cmd === "!blackjack") {
+            //Actual stuff happening
+            message.channel.sendMessage("Please place your bet.");
+            const filter = m => (m.content.match("yes") && m.author.id === msg.author.id);
+
+            msg.channel.awaitMessages(filter, {
+                max: 1,
+                time: 15000,
+                errors: ['time']
+            })
+                .then(function (m) {
+                    //m is the messages caught by filter
+                    var stringResponse = m.content;
+                    var userBet = parseInt(stringResponse); 
+
+                    message.channel.sendMessage("Insert hand here");
+                })
+                .catch(function () {
+                    //TODO, caught
+                    "Invalid Response."
+                });
         }
     }
 
     //Don't touch these!
-    self.load = function(database) {
+    self.load = function (database) {
         self.db = database;
         console.log("blackjack.js loaded");
     }
-    self.loadPerms = function(msg) {
+    self.loadPerms = function (msg) {
         let commands = getCommands();
         for (let command in commands) {
             let cmd = commands[command];
@@ -40,4 +71,4 @@ var fun = function() {
         msg.channel.sendMessage("`blackjack.js` has been enabled!");
     }
 }
-module.exports = fun;
+module.exports = blackjack;
