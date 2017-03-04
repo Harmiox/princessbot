@@ -1,0 +1,13 @@
+{
+	"commands": {
+		"wolf": {
+			"description": "`!wolf <endCharacter>`"
+		},
+		"sprains": {
+			"description": "`!sprains`"
+		},
+		"armoredtruck": {
+			"description": "`!armoredtruck`"
+		}
+	}
+}

@@ -1,26 +1,8 @@
-let cogs = {}
-
-//Global Functions
-function numberWithCommas(x) {
-    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-}
-
-function getEconomyJson() {
-    fs = require('fs');
-    let economyJson = JSON.parse(fs.readFileSync("./cogs/economy.json").toString());
-    return economyJson;
-}
-
-function userRarity(user) {
-    //TODO
-}
-
-function chestLevel(amount) {
-    let economyJson = getEconomyJson();
+function chestLevel(amount,guildJson) {
     let chestLevel = "`Error`"
-    for (var chest in economyJson.chests) {
-        if (economyJson.chests.hasOwnProperty(chest)) {
-            if (amount >= (economyJson.gemDollarValue * economyJson.chests[chest])) {
+    for (var chest in guildJson.chests) {
+        if (guildJson.chests.hasOwnProperty(chest)) {
+            if (amount >= (guildJson.gemDollarValue * guildJson.chests[chest])) {
                 chestLevel = chest;
                 continue;
             } else {
@@ -30,278 +12,280 @@ function chestLevel(amount) {
     }
     return chestLevel;
 }
-var tradeInProgress = false;
-var cooldowns = new Map();
-
-function getTimeRemaining(endtime) {
-    var t = Date.parse(endtime) - Date.parse(new Date());
-    var seconds = Math.floor((t / 1000) % 60);
-    var minutes = Math.floor((t / 1000 / 60) % 60);
-    var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
-    var days = Math.floor(t / (1000 * 60 * 60 * 24));
-    return {
-        'total': t,
-        'days': days,
-        'hours': hours,
-        'minutes': minutes,
-        'seconds': seconds
-    };
+function getDefaultSettings() {
+    settings = {
+        "gemCreditsValue": 18182,
+        "gemDollarValue": 110,
+        "levels": {
+            "1": {
+                "xp": 500,
+                "freechest": 0
+            },
+            "2": {
+                "xp": 500,
+                "freechest": 0
+            },
+            "3": {
+                "xp": 500,
+                "freechest": 0
+            },
+            "4": {
+                "xp": 500,
+                "freechest": 0
+            },
+            "5": {
+                "xp": 500,
+                "freechest": 0
+            },
+            "6": {
+                "xp": 500,
+                "freechest": 0
+            },
+            "7": {
+                "xp": 500,
+                "freechest": 0
+            },
+            "8": {
+                "xp": 500,
+                "freechest": 0
+            },
+            "9": {
+                "xp": 500,
+                "freechest": 0
+            },
+            "10": {
+                "xp": 500,
+                "freechest": 0
+            },
+            "11": {
+                "xp": 500,
+                "freechest": 0
+            },
+            "12": {
+                "xp": 500,
+                "freechest": 0
+            },
+            "13": {
+                "xp": 500,
+                "freechest": 0
+            }
+        },
+        "chests": {
+            "Wooden Chest": 0,
+            "Silver Chest": 25,
+            "Gold Chest": 50,
+            "Giant Chest": 75,
+            "Epic Chest": 100,
+            "Super Magical Chest": 200,
+            "Legendary Chest": 500
+        }
+    }
+    return JSON.stringify(settings,null,"\t");
+}
+function getCommands() {
+    let commands = {
+		"chest": {
+			"description": "`!chest` `!chest @user`"
+		},
+		"chest open": {
+			"description": "`!chest open @user <amount>`"
+		},
+		"chest transfer": {
+			"description": "`!chest transfer @user <amount>`"
+		},
+		"chest set": {
+			"description": "`!chest set @user <amount>`"
+		},
+		"chest add": {
+			"description": "`!chest add @user <amount>`"
+		},
+		"chest reset": {
+			"description": "`!chest reser @user`"
+		},
+		"freechest": {
+			"description": "`!freechest`"
+		}
+    }
+    return commands;
 }
 var economy = function() {
     var self = this;
-    self.returnJson = getEconomyJson();
-    self.onReady = function(cogsFile) { 
-        cogs = cogsFile;
-        cogs.loaded["permissions"].loadPerms(getEconomyJson());
-        console.log("economy.js loaded");
-    }
-    self.onMsg = function(msg) {
-        let prefix = "!";
-        if (msg.content.startsWith(prefix + "chest")) {
-            let economyJson = getEconomyJson();
-            let args = msg.content.split(" ");
-            if (args.length == 1) {
-                if (!economyJson.vaults[msg.author.id]) {
-                    msg.channel.sendMessage(msg.author + " you don't own a chest, use `!chest open` to open a chest!");
-                    return;
-                }
-                msg.channel.sendMessage(msg.author + " your " + chestLevel(economyJson.vaults[msg.author.id].amount) + " currently holds **" + numberWithCommas(economyJson.vaults[msg.author.id].amount) + "** gems.");
-            }
-            if (args.length >= 2) {
-                if (args[1] === "open") {
-                    if (economyJson.vaults[msg.author.id]) {
-                        msg.channel.sendMessage(msg.author + " you already own a chest!");
-                        return;
-                    }
-                    economyJson.vaults[msg.author.id] = {
-                        "amount": 0
-                    };
-                    cogs.writeFile("./cogs/economy.json", JSON.stringify(economyJson, null, "\t"));
-                    msg.channel.sendMessage(msg.author + " you've successfully opened up a chest!");
-                } else if (args[1] === "transfer") {
-                    if (args.length === 4) {
-                        if (!args[2].startsWith("<@")) {
-                            msg.channel.sendMessage(msg.author + " Example: `!chest transfer @user 10000`");
-                            return;
-                        }
-                        let toSend = msg.mentions.users.first();
-                        if (!toSend) {
-                            msg.channel.sendMessage(msg.author + " Example: `!chest transfer @user 10000`");
-                            return;
-                        }
-                        if (!economyJson.vaults[msg.author.id]) {
-                            msg.channel.sendMessage(msg.author + " you don't own a chest, use `!chest open` to open a chest!");
-                            return;
-                        }
-                        if (!economyJson.vaults[toSend.id]) {
-                            msg.channel.sendMessage(msg.author + " that user does not own a chest!");
-                            return;
-                        }
-                        if (parseInt(args[3]) > economyJson.vaults[msg.author.id].amount) {
-                            msg.channel.sendMessage(msg.author + " you don't have that amount of gems in your chest!");
-                            return;
-                        }
-                        if (parseInt(args[3]) <= 0) {
-                            msg.channel.sendMessage(msg.author + " you must transfer at least **1** gem.");
-                            return;
-                        }
-                        economyJson.vaults[msg.author.id].amount -= parseInt(args[3]);
-                        economyJson.vaults[toSend.id].amount += parseInt(args[3]);
-                        cogs.writeFile("./cogs/economy.json", JSON.stringify(economyJson, null, "\t"));
-                        msg.channel.sendMessage(msg.author + " the transfer of **" + parseInt(args[3]) + "** gems to " + toSend.username + " was successful");
-                    } else {
-                        msg.channel.sendMessage("Invalid Use `!chest transfer @user <amount>`");
-                    }
-                } else if (args[1].startsWith("<@") || args[1].startsWith("<@!")) {
-                    let toSend = msg.mentions.users.first();
-                    if (!toSend) {
-                        msg.channel.sendMessage(msg.author + " Example: `!chest @user`");
-                        return;
-                    }
-                    if (!economyJson.vaults[toSend.id]) {
-                        msg.channel.sendMessage(msg.author + " that user does not own a chest!");
-                        return;
-                    }
-                    msg.channel.sendMessage(toSend.username + "'s " + chestLevel(economyJson.vaults[toSend.id].amount) + " currently holds **" + numberWithCommas(economyJson.vaults[toSend.id].amount) + "** gems.");
-                } else if (args[1] === "set") {
-                    //TODO - Role Permissions
-                    if (args.length === 4) {
-                        if (!args[2].startsWith("<@")) {
-                            msg.channel.sendMessage(msg.author + " **User Not Given**, Ex: `!chest set @user 10000`");
-                            return;
-                        }
-                        let toSend = msg.mentions.users.first();
-                        if (!toSend) {
-                            msg.channel.sendMessage(msg.author + " **Invalid User**, Ex: `!chest set @user 10000`");
-                            return;
-                        }
-                        if (!economyJson.vaults[toSend.id]) {
-                            msg.channel.sendMessage(msg.author + " that user does not own a chest!");
-                            return;
-                        }
-                        if (parseInt(args[3]) <= -1) {
-                            msg.channel.sendMessage(msg.author + " you must set the chest to at least **0** gems.");
-                            return;
-                        }
-                        economyJson.vaults[toSend.id].amount = parseInt(args[3]);
-                        cogs.writeFile("./cogs/economy.json", JSON.stringify(economyJson, null, "\t"));
-                        msg.channel.sendMessage(toSend.username + "'s " + chestLevel(economyJson.vaults[toSend.id].amount) + " has been set to **" + parseInt(args[3]) + "** gems.");
-                    } else {
-                        msg.channel.sendMessage("Invalid Use `!chest set @user <amount>`");
-                    }
-                } else if (args[1] === "add") {
-                    //TODO - Role Permissions
-                    if (args.length === 4) {
-                        if (!args[2].startsWith("<@")) {
-                            msg.channel.sendMessage(msg.author + " Example: `!chest set @user 10000`");
-                            return;
-                        }
-                        let toSend = msg.mentions.users.first();
-                        if (!toSend) {
-                            msg.channel.sendMessage(msg.author + " Example: `!chest set @user 10000`");
-                            return;
-                        }
-                        if (!economyJson.vaults[toSend.id]) {
-                            msg.channel.sendMessage(msg.author + " that user does not own a chest!");
-                            return;
-                        }
-                        if (parseInt(args[3]) <= -1) {
-                            msg.channel.sendMessage(msg.author + " you must set the chest to at least **0** gems.");
-                            return;
-                        }
-                        economyJson.vaults[toSend.id].amount += parseInt(args[3]);
-                        cogs.writeFile("./cogs/economy.json", JSON.stringify(economyJson, null, "\t"));
-                        msg.channel.sendMessage("**" + parseInt(args[3]) + "** gems have been added to " + toSend.username + "'s " + chestLevel(economyJson.vaults[toSend.id].amount));
-                    } else {
-                        msg.channel.sendMessage("Invalid Use `!chest set <@user> <amount>`");
-                    }
-                } else if (args[1] === "delete") {
-                    //TODO - Role Permissions
-                    if (args.length === 3) {
-                        if (!args[2].startsWith("<@")) {
-                            msg.channel.sendMessage(msg.author + " Example: `!chest delete @user`");
-                            return;
-                        }
-                        let toSend = msg.mentions.users.first();
-                        if (!toSend) {
-                            msg.channel.sendMessage(msg.author + " Example: `!chest delete @user`");
-                            return;
-                        }
-                        if (!economyJson.vaults[toSend.id]) {
-                            msg.channel.sendMessage(msg.author + " that user does not own a chest!");
-                            return;
-                        }
-                        msg.channel.sendMessage(msg.author + " are you sure you'd like to delete **" + toSend.username + "'s** chest? Say `yes` to continue.");
-                        const filter = m => (m.content.match("yes") && m.author.id === msg.author.id);
-                        msg.channel.awaitMessages(filter, {
-                                max: 1,
-                                time: 5000,
-                                errors: ['time']
-                            })
-                            .then(function() {
-                                delete economyJson.vaults[toSend.id];
-                                cogs.writeFile("./cogs/economy.json", JSON.stringify(economyJson, null, "\t"));
-                                msg.channel.sendMessage("**" + toSend.username + "'s** chest has been deleted. **R.I.P.**");
-                            })
-                            .catch(function() {
-                                msg.channel.sendMessage(msg.author + " you took too long to respond.");
-                            });
-
-                    } else {
-                        msg.channel.sendMessage("Invalid Use, Ex: `!chest delete <@user>`");
-                    }
-                } else if (args[1] === "help") {
-                    //TODO - Help
-                } else {
-                    msg.channel.sendMessage("Invalid Use");
-                }
-            }
-        }
-        /*if (msg.content.startsWith(prefix + "gems")) {
-            if (tradeInProgress === true) {
-                msg.channel.sendMessage(msg.author + " someone is currently buying gems.");
-                return;
-            }
-            let economyJson = getEconomyJson();
-            let args = msg.content.split(" ");
-            if (args.length < 2) {
-                msg.channel.sendMessage("**Buy Gems:** `!gems <amountOfGems>`");
-                return;
-            }
-            if (!economyJson.vaults[msg.author.id]) {
-                msg.channel.sendMessage(msg.author + " you don't own a chest, use `!chest open` to open a chest!");
-                return;
-            }
-            if (parseInt(args[1]) <= 0) {
-                msg.channel.sendMessage("**Invalid Use** `<amountOfGems>` must be a value greater than 0.");
-                return;
-            }
-            tradeInProgress = true;
-            let gems = parseInt(args[1]);
-            let credits = parseInt(gems * economyJson.gemCreditsValue);
-            msg.channel.sendMessage(msg.author + " are you sure you'd like to trade **" + credits + "** credits for **" + gems + "** gems? If so, use `!pay @PrincessBot#9383 " + credits + "` trade your credits for gems.");
-            const filter = m => (m.content.endsWith(credits + " credits have been transferred to " + msg.client.user.username + "'s account.") && m.author.id === '194525847565238272');
-            msg.channel.awaitMessages(filter, {
-                    max: 1,
-                    time: 15000,
-                    errors: ['time']
-                })
-                .then(function() {
-                    economyJson.vaults[msg.author.id].amount += gems;
-                    cogs.writeFile("./cogs/economy.json", JSON.stringify(economyJson, null, "\t"));
-                    msg.channel.sendMessage(msg.author + " **" + gems + "** gems have been added to your " + chestLevel(economyJson.vaults[msg.author.id].amount) + ".");
-                    tradeInProgress = false;
-                })
-                .catch(function() {
-                    msg.channel.sendMessage(msg.author + " you took too long.");
-                    tradeInProgress = false;
-                });
-        }
-        if (msg.content.startsWith(prefix + "pay")) {
-            const filter = m => (m.content.endsWith(" credits have been transferred to " + msg.client.user.username + "'s account.") && m.author.id === '194525847565238272');
-            msg.channel.awaitMessages(filter, {
-                    max: 1,
-                    time: 15000,
-                    errors: ['time']
-                })
-                .then(function() {
-                    if (tradeInProgress === true) {
-                        return;
-                    }
-                    let amount = msg.content.split(" ").slice(2)[0];
-                    msg.channel.sendMessage("!pay " + msg.author + " " + amount + " `REFUND`");
-                });
-        }*/
-        if (msg.content.startsWith(prefix + "freechest")) {
-            let economyJson = getEconomyJson();
-            economyJson.vaults[msg.author.id].amount += 2;
-            cogs.writeFile("./cogs/economy.json", JSON.stringify(economyJson, null, "\t"));
-            msg.channel.sendMessage(msg.author + " **" + 2 + "** gems have been added to your " + chestLevel(economyJson.vaults[msg.author.id].amount) + ".");
-            
-            /*let economyJson = getEconomyJson();
-            if (!economyJson.vaults[msg.author.id]) {
-                msg.channel.sendMessage(msg.author + " you don't own a chest, use `!chest open` to open a chest!");
-                return;
-            }
-            let oldDateObj = new Date();
-            var newDateObj = new Date(oldDateObj.getTime() + 240 * 60000);
-            if (!cooldowns[msg.author.id]) {
-                //console.log("new");
-                cooldowns[msg.author.id] = newDateObj;
-            }
-            if (getTimeRemaining(cooldowns[msg.author.id]).seconds <= 0) {
-                if (!economyJson.vaults[msg.author.id]) {
-                    msg.channel.sendMessage(msg.author + " you don't own a chest, use `!chest open` to open a chest!");
-                    return;
-                }
-                cooldowns[msg.author.id] = newDateObj;
-                economyJson.vaults[msg.author.id].amount += 2;
-                cogs.writeFile("./cogs/economy.json", JSON.stringify(economyJson, null, "\t"));
-                msg.channel.sendMessage(msg.author + " **" + 2 + "** gems have been added to your " + chestLevel(economyJson.vaults[msg.author.id].amount) + ".");
+    self.getCmds = getCommands();
+    self.onMsg = function(cmd,msg) {
+        let guild = msg.guild.id;
+        let args = msg.content.split(" ");
+        var economyJson = null;
+        econ.get(`SELECT * FROM settings WHERE guildId ='${msg.guild.id}'`).then(row => {
+            if (!row) {
+                econ.run('INSERT INTO settings (guildId, json) VALUES (?, ?)', [msg.guild.id, getDefaultSettings()]);
+                economyJson = JSON.parse(row.json.toString());
             } else {
-                msg.channel.sendMessage(msg.author + " you can't do that for " + getTimeRemaining(cooldowns[msg.author.id]).hours + " hours, " + getTimeRemaining(cooldowns[msg.author.id]).minutes + " minutes, and " + getTimeRemaining(cooldowns[msg.author.id]).seconds + " seconds.");
-            
-            }*/
+                economyJson = JSON.parse(row.json.toString());
+            }
+        });
+
+        if (cmd === "chest") {
+            let toSend = msg.mentions.users.first();
+            if (toSend) {
+                econ.get(`SELECT * FROM users WHERE userId ='${toSend.id}' AND guildId ='${msg.guild.id}'`).then(row => {
+                    if (!row) {
+                        msg.channel.sendMessage("That user doesn't have a chest.");
+                    } else {
+                      //econ.run(`UPDATE users SET gems = ${row.gems + 1} WHERE userId = ${msg.author.id}`);
+                      msg.channel.sendMessage(`${toSend.username}'s ${chestLevel(row.gems,economyJson)} contains **${row.gems}** gems.`);
+                    }
+                  }).catch(() => {
+                    console.error;
+                    econ.run('CREATE TABLE IF NOT EXISTS users (guildId TEXT, userId TEXT, king INTEGER, xp INTEGER, chest TEXT, gems INTEGER)').then(() => {
+                      msg.channel.sendMessage("That user doesn't have a chest.");
+                    });
+                });
+                return;
+            }
+            econ.get(`SELECT * FROM users WHERE userId ='${msg.author.id}' AND guildId ='${msg.guild.id}'`).then(row => {
+                if (!row) {
+                    msg.channel.sendMessage(msg.author + " You don't own a chest, use `!chest open` to open a chest in order to start collecting gems.");
+                } else {
+                  //econ.run(`UPDATE users SET gems = ${row.gems + 1} WHERE userId = ${msg.author.id}`);
+                  msg.channel.sendMessage(`${msg.author} Your ${chestLevel(row.gems,economyJson)} contains **${row.gems}** gems.`);
+                }
+              }).catch(() => {
+                console.error;
+                msg.channel.sendMessage(msg.author + " You don't own a chest, use `!chest open` to open a chest in order to start collecting gems.");
+            });
+        }
+        if (cmd === "chest open") {
+            econ.get(`SELECT * FROM users WHERE userId ='${msg.author.id}' AND guildId ='${msg.guild.id}'`).then(row => {
+                if (!row) {
+                  econ.run('INSERT INTO users (userId, gems, guildId, chest) VALUES (?, ?, ?, ?)', [msg.author.id, 0, msg.guild.id, "Wooden Chest"]);
+                  msg.channel.sendMessage(msg.author + " You've opened a Wooden Chest! You can now collect gems from `!freechest`. The more gems you have in your chest, the bigger your chest gets!");
+                } else {
+                  //econ.run(`UPDATE users SET gems = ${row.gems + 1} WHERE userId = ${msg.author.id}`);
+                  msg.channel.sendMessage("You already own a " + chestLevel(row.gems,economyJson) + "!");
+                }
+              }).catch(() => {
+                console.error;
+                econ.run('INSERT INTO users (userId, gems, guildId, chest) VALUES (?, ?, ?, ?)', [msg.author.id, 0, msg.guild.id, "Wooden Chest"]);
+                msg.channel.sendMessage(msg.author + " You've opened a Wooden Chest! You can now collect gems from `!freechest`. The more gems you have in your chest, the bigger your chest gets!");
+            });
+        }
+        if (cmd === "chest transfer") {
+            econ.get(`SELECT * FROM users WHERE userId ='${msg.author.id}' AND guildId ='${msg.guild.id}'`).then(sender => {
+                if (!sender) {
+                    msg.channel.sendMessage(msg.author + " You don't own a chest, use `!chest open` to open a chest in order to start collecting gems.");
+                } else {
+                    let toSend = msg.mentions.users.first();
+                    if (toSend) {
+                        econ.get(`SELECT * FROM users WHERE userId ='${toSend.id}' AND guildId ='${msg.guild.id}'`).then(receiver => {
+                            let amount = parseInt(msg.content.split(" ")[3]);
+                            if (!amount) {
+                                msg.channel.sendMessage(msg.author + " You must specify an amount to send. `!chest transfer @user <amount>`");
+                                return;
+                            }
+                            if (amount <= 0) {
+                                msg.channel.sendMessage(msg.author + " You must send more than 0 gems.");
+                                return;
+                            }
+                            if (amount > sender.gems) {
+                                msg.channel.sendMessage(msg.author + " You do not have enough gems in your chest.");
+                                return;
+                            }
+                            econ.run(`UPDATE users SET gems = ${sender.gems - amount} WHERE userId = ${msg.author.id}`);
+                            econ.run(`UPDATE users SET gems = ${receiver.gems + amount} WHERE userId = ${toSend.id}`);
+                            msg.channel.sendMessage(msg.author + " the transfer of **" + amount + "** gems to " + toSend.username + " was successful");
+                        }).catch(() => {
+                            msg.channel.sendMessage(msg.author + " That user doesn't have a chest.");
+                        });
+                    } else {
+                        msg.channel.sendMessage(msg.author + " Please specify a user to send gems to. `!chest transfer @user <amount>`");
+                    }
+                }
+              }).catch(() => {
+                console.error;
+                msg.channel.sendMessage(msg.author + " You don't own a chest, use `!chest open` to open a chest in order to start collecting gems.");
+            });
+        }
+        if (cmd === "chest set") {
+            let toSend = msg.mentions.users.first();
+            if (toSend) {
+                econ.get(`SELECT * FROM users WHERE userId ='${toSend.id}' AND guildId ='${msg.guild.id}'`).then(receiver => {
+                    let amount = parseInt(msg.content.split(" ")[3]);
+                    if (!amount) {
+                        msg.channel.sendMessage(msg.author + " You must specify an amount to send. `!chest set @user <amount>`");
+                        return;
+                    }
+                    if (amount <= 0) {
+                        msg.channel.sendMessage(msg.author + " You must send more than 0 gems.");
+                        return;
+                    }
+                    econ.run(`UPDATE users SET gems = ${amount} WHERE userId = ${toSend.id}`);
+                    msg.channel.sendMessage(msg.author + " the chest of " + toSend.username + " has been set to **" + amount + "** gems ");
+                }).catch(() => {
+                    msg.channel.sendMessage(msg.author + " That user doesn't have a chest.");
+                });
+            } else {
+                msg.channel.sendMessage(msg.author + " Please specify a user to set their chest to. `!chest set @user <amount>`");
+            }
+        }
+        if (cmd === "chest add") {
+            let toSend = msg.mentions.users.first();
+            if (toSend) {
+                econ.get(`SELECT * FROM users WHERE userId ='${toSend.id}' AND guildId ='${msg.guild.id}'`).then(receiver => {
+                    let amount = parseInt(msg.content.split(" ")[3]);
+                    if (!amount) {
+                        msg.channel.sendMessage(msg.author + " You must specify an amount to send. `!chest add @user <amount>`");
+                        return;
+                    }
+                    if (amount <= 0) {
+                        msg.channel.sendMessage(msg.author + " You must send more than 0 gems.");
+                        return;
+                    }
+                    econ.run(`UPDATE users SET gems = ${receiver.gems + amount} WHERE userId = ${toSend.id}`);
+                    msg.channel.sendMessage(msg.author + " **" + amount + "** gems have been added to " + toSend.username + "'s chest.");
+                }).catch(() => {
+                    msg.channel.sendMessage(msg.author + " That user doesn't have a chest.");
+                });
+            } else {
+                msg.channel.sendMessage(msg.author + " Please specify a user to add to their chest. `!chest add @user <amount>`");
+            }
+        }
+        if (cmd === "chest reset") {
+            let toSend = msg.mentions.users.first();
+            if (toSend) {
+                econ.get(`SELECT * FROM users WHERE userId ='${toSend.id}' AND guildId ='${msg.guild.id}'`).then(receiver => {
+                    msg.channel.sendMessage(msg.author + " Are you sure you would like to reset " + toSend.username + "'s chest? Say `yes` to continue.");
+                    const filter = m => (m.content.match("yes") && m.author.id === msg.author.id);
+                    msg.channel.awaitMessages(filter, {
+                            max: 1,
+                            time: 5000,
+                            errors: ['time']
+                        })
+                        .then(function() {
+                            econ.run(`UPDATE users SET gems = ${0} WHERE userId = ${toSend.id}`);
+                            msg.channel.sendMessage(msg.author + " "+ toSend.username + "'s chest has been reset.")
+                        })
+                        .catch(function() {
+                            msg.channel.sendMessage(msg.author + " you took too long to respond.");
+                        });
+                }).catch(() => {
+                    msg.channel.sendMessage(msg.author + " That user doesn't have a chest.");
+                });
+            } else {
+                msg.channel.sendMessage(msg.author + " Please specify a user to reset their chest. `!chest reset @user <amount>`");
+            }
+        }
+        if (cmd === "freechest") {
+            econ.get(`SELECT * FROM users WHERE userId ='${msg.author.id}' AND guildId ='${msg.guild.id}'`).then(row => {
+                if (!row) {
+                  msg.channel.sendMessage(msg.author + " You don't own a chest, use `!chest open` to open a chest in order to start collecting gems.");
+                } else {
+                    msg.channel.sendMessage(`**${1}** gems have been added to your ${chestLevel(row.gems,economyJson)}!`);
+                    econ.run(`UPDATE users SET gems = ${row.gems + 1} WHERE userId = ${msg.author.id}`);
+                }
+              }).catch(() => {
+                console.error;
+                msg.channel.sendMessage(msg.author + " You don't own a chest, use `!chest open` to open a chest in order to start collecting gems.");
+            });
         }
     };
 };

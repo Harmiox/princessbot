@@ -1,3 +1,0 @@
-let phrase = " has joined the crew.";
-let message = "harmioxhas joined the crew."
-console.log(message.slice(phrase));

@@ -1,80 +1,187 @@
 {
 	"commands": {
+		"1998": {
+			"description": "* custom command",
+			"sends": "https://media.giphy.com/media/26tng1T9qNevZqHpC/giphy.gif"
+		},
 		"bot": {
-			"cooldown": 0,
-			"roles_allowed": {},
-			"users_denied": {},
-			"channels_denied": {}
+			"description": ""
 		},
 		"chest": {
-			"cooldown": 0,
-			"roles_allowed": {
-				"179663287800168448": "Bot"
-			},
-			"users_denied": {},
-			"channels_denied": {}
+			"description": "",
+			"usersDenied": {}
 		},
 		"chest open": {
-			"cooldown": 0,
-			"roles_allowed": {
-				"179663287800168448": "Bot"
-			},
-			"users_denied": {},
-			"channels_denied": {}
+			"description": ""
 		},
 		"chest transfer": {
-			"cooldown": 0,
-			"roles_allowed": {},
-			"users_denied": {},
-			"channels_denied": {}
+			"description": ""
 		},
 		"chest set": {
-			"cooldown": 0,
-			"roles_allowed": {},
-			"users_denied": {},
-			"channels_denied": {}
+			"description": "",
+			"rolesAllowed": {
+				"283649866897293312": "Staff"
+			}
 		},
 		"chest add": {
-			"cooldown": 0,
-			"roles_allowed": {},
-			"users_denied": {},
-			"channels_denied": {}
+			"description": "",
+			"rolesAllowed": {
+				"283649866897293312": "Staff"
+			}
 		},
-		"chest delete": {
-			"cooldown": 0,
-			"roles_allowed": {},
-			"users_denied": {},
-			"channels_denied": {}
+		"chest reset": {
+			"description": "",
+			"rolesAllowed": {
+				"283649866897293312": "Staff"
+			}
 		},
 		"freechest": {
-			"cooldown": 14400,
-			"roles_allowed": {
-				"179663287800168448": "Bot"
+			"description": "",
+			"rolesAllowed": {
+				"184030211304718338": "Mods",
+				"283649866897293312": "Staff",
+				"283728573511237633": "Alpha"
 			},
-			"users_denied": {},
-			"channels_denied": {
-				"282653334563717123": "goblin-hut"
-			}
+			"cooldown": 14000
 		},
 		"battle": {
-			"cooldown": 30,
-			"roles_allowed": {},
-			"users_denied": {},
-			"channels_denied": {
-				"273773402572062721": "general"
+			"description": "",
+			"channelsDenied": {
+				"230160525403750400": "discord-support"
 			}
+		},
+		"battles": {
+			"description": "",
+			"channelsDenied": {
+				"230160525403750400": "discord-support",
+				"178281233233608705": "global-chat"
+			}
+		},
+		"harm": {
+			"description": "* custom command",
+			"sends": "is awesome."
+		},
+		"bt": {
+			"description": "* alias",
+			"aliasTo": "battle"
+		},
+		"protect": {
+			"description": "`!protect`"
+		},
+		"unprotect": {
+			"description": "`!unprotect`"
+		},
+		"wolf": {
+			"description": "`!wolf <endCharacter>`",
+			"channelsDenied": {}
+		},
+		"pringles": {
+			"description": "* alias"
+		},
+		"sab": {
+			"description": "* custom command"
+		},
+		"halmont": {
+			"description": "* custom command",
+			"sends": "🤓"
+		},
+		"party": {
+			"description": "* custom command",
+			"sends": "https://media.giphy.com/media/McAz8jv7E7sAM/giphy.gif"
+		},
+		"soap": {
+			"description": "* custom command"
+		},
+		"caro": {
+			"description": "* custom command",
+			"sends": "Did you mean Jiro? 🌚"
+		},
+		"sprains": {
+			"description": "`!sprains`"
+		},
+		"fc": {
+			"description": "* alias",
+			"aliasTo": "freechest"
 		}
 	},
 	"cooldowns": {
-		"freechest": {
-			"228781414986809344": "2017-02-20T18:18:28.732Z",
-			"145215019288756224": "2017-02-19T09:07:13.629Z",
-			"195612311174643713": "2017-02-19T09:55:54.165Z",
-			"226720625329176576": "2017-02-19T09:55:57.668Z"
-		},
+		"freechest": {},
 		"battle": {
-			"228781414986809344": "2017-02-21T14:29:27.442Z",
-			"255764664938528784": "2017-02-21T02:41:37.041Z"
+			"228781414986809344": null,
+			"145215019288756224": null,
+			"195612311174643713": null,
+			"185122850284371968": null,
+			"261266292663648256": null,
+			"217276714244505600": null,
+			"280865863035387904": null,
+			"178602048831488000": null,
+			"116688151954718721": null,
+			"211562278800195584": null,
+			"210949744074162176": null,
+			"280066837893611520": null,
+			"235410334846943232": null,
+			"230608632973099009": null,
+			"225280981471330304": null,
+			"138129851864449025": null,
+			"222815337014362112": null,
+			"235593018332282884": null,
+			"244272109579272192": null,
+			"255450168457953290": null,
+			"282980961862418444": null,
+			"154697207742857218": null,
+			"162559936247627776": null,
+			"156273875062095872": null,
+			"263992960927006720": null,
+			"264767232259653643": null,
+			"158789958948225024": null,
+			"263263239255621633": null,
+			"211127913746137088": null,
+			"240125631885606913": null,
+			"245742324297105428": null,
+			"147401491706150912": null,
+			"275493777538285568": null,
+			"208758957890732032": null,
+			"185488796232581120": null,
+			"255155531688181761": null,
+			"267339318874472458": null,
+			"191948420141809665": null,
+			"193760280231018497": null,
+			"109512286506319872": null,
+			"138392077405782017": null,
+			"234837385186246666": null,
+			"283047934579441666": null,
+			"280868870095503360": null,
+			"220398918519881730": null,
+			"196741512808235008": null,
+			"225046663889289217": null,
+			"255764664938528784": null,
+			"233751476114030593": null,
+			"266677890588999691": null,
+			"198195864475402240": null,
+			"199745420111511562": null,
+			"208347403802247178": null,
+			"223270835098615810": null,
+			"270627080721399808": null,
+			"212778363578875904": null,
+			"282021333209055232": null,
+			"254425893320130562": null,
+			"160380819528089600": null,
+			"230378021507301376": null,
+			"179307754656235520": null,
+			"155631558718390273": null,
+			"155440937835692032": null,
+			"222766364945809408": null,
+			"240274027183079425": null,
+			"236222542707294208": null,
+			"200282974187421707": null,
+			"280068900849188874": null
+		},
+		"bt": {
+			"228781414986809344": null,
+			"145215019288756224": null,
+			"178602048831488000": null,
+			"255764664938528784": null,
+			"282021333209055232": null
 		}
 	}
 }

@@ -1,19 +1,1565 @@
 {
-    "users":{
-        "0": {
-            "username":"zero",
-            "protected":false,
-            "wins":0,
-            "losses":0,
-            "draws":0
-        }
-    },
+	"users": {
+		"228781414986809344": {
+			"wins": 17,
+			"losses": 21,
+			"draws": 0,
+			"total": 38,
+			"ratio": 0.8095238095238095,
+			"username": "Harmiox"
+		},
+		"284119167609864192": {
+			"wins": 0,
+			"losses": 2,
+			"draws": 0,
+			"total": 2,
+			"ratio": 0,
+			"username": "PrincessBot"
+		},
+		"145215019288756224": {
+			"wins": 3,
+			"losses": 3,
+			"draws": 0,
+			"total": 6,
+			"ratio": 1,
+			"username": "halmont"
+		},
+		"195612311174643713": {
+			"wins": 14,
+			"losses": 12,
+			"draws": 0,
+			"total": 26,
+			"ratio": 1.1666666666666667,
+			"username": "prangles"
+		},
+		"185122850284371968": {
+			"wins": 45,
+			"losses": 56,
+			"draws": 0,
+			"total": 101,
+			"ratio": 0.8035714285714286,
+			"username": "Archknight"
+		},
+		"223270835098615810": {
+			"wins": 1,
+			"losses": 1,
+			"draws": 0,
+			"total": 2,
+			"ratio": 0.5,
+			"username": "Zeep"
+		},
+		"261266292663648256": {
+			"wins": 13,
+			"losses": 10,
+			"draws": 0,
+			"total": 23,
+			"ratio": 0.5652173913043478,
+			"username": "Deep"
+		},
+		"217276714244505600": {
+			"wins": 0,
+			"losses": 1,
+			"draws": 0,
+			"total": 1,
+			"ratio": 0,
+			"username": "MasterFlare"
+		},
+		"222815337014362112": {
+			"wins": 22,
+			"losses": 25,
+			"draws": 0,
+			"total": 47,
+			"ratio": 0.88,
+			"username": "RedditAlumni>RedditAvalon"
+		},
+		"280865863035387904": {
+			"wins": 3,
+			"losses": 2,
+			"draws": 0,
+			"total": 5,
+			"ratio": 0.6,
+			"username": "Ashen-AFN"
+		},
+		"269324997691047936": {
+			"wins": 29,
+			"losses": 38,
+			"draws": 0,
+			"total": 67,
+			"ratio": 0.7631578947368421,
+			"username": "PrincessBot"
+		},
+		"178602048831488000": {
+			"wins": 68,
+			"losses": 62,
+			"draws": 0,
+			"total": 130,
+			"ratio": 1.096774193548387,
+			"username": "XXGAMERXXKID™"
+		},
+		"116688151954718721": {
+			"wins": 10,
+			"losses": 7,
+			"draws": 0,
+			"total": 17,
+			"ratio": 0.5882352941176471,
+			"username": "PiZaHuTt"
+		},
+		"211562278800195584": {
+			"wins": 6,
+			"losses": 4,
+			"draws": 0,
+			"total": 10,
+			"ratio": 1.5,
+			"username": "cevoorn"
+		},
+		"194525847565238272": {
+			"wins": 1,
+			"losses": 2,
+			"draws": 0,
+			"total": 3,
+			"ratio": 0.3333333333333333,
+			"username": "BarbarianBot"
+		},
+		"235410334846943232": {
+			"wins": 5,
+			"losses": 10,
+			"draws": 0,
+			"total": 15,
+			"ratio": 0.3333333333333333,
+			"username": "ltrob"
+		},
+		"184265352463646720": {
+			"wins": 0,
+			"losses": 1,
+			"draws": 0,
+			"total": 1,
+			"ratio": 0,
+			"username": "GamesScotzYT - LPC Member📱🎮"
+		},
+		"270289377882537994": {
+			"wins": 1,
+			"losses": 1,
+			"draws": 0,
+			"total": 2,
+			"ratio": 0.5,
+			"username": "PRINCESS"
+		},
+		"206183787917344770": {
+			"wins": 0,
+			"losses": 3,
+			"draws": 0,
+			"total": 3,
+			"ratio": 0,
+			"username": "jarrett"
+		},
+		"255450168457953290": {
+			"wins": 6,
+			"losses": 2,
+			"draws": 0,
+			"total": 8,
+			"ratio": 0.75,
+			"username": "ICantThinkOfNameHelp"
+		},
+		"230608632973099009": {
+			"wins": 2,
+			"losses": 6,
+			"draws": 0,
+			"total": 8,
+			"ratio": 0.25,
+			"username": "TheMothWhisperer"
+		},
+		"154753309289218048": {
+			"wins": 1,
+			"losses": 1,
+			"draws": 0,
+			"total": 2,
+			"ratio": 0.5,
+			"username": "Diamondwolf"
+		},
+		"225280981471330304": {
+			"wins": 1,
+			"losses": 3,
+			"draws": 0,
+			"total": 4,
+			"ratio": 0.25,
+			"username": "Kleptomaniac"
+		},
+		"138129851864449025": {
+			"wins": 4,
+			"losses": 3,
+			"draws": 0,
+			"total": 7,
+			"ratio": 1.3333333333333333,
+			"username": "Sinned"
+		},
+		"269993887286820865": {
+			"wins": 1,
+			"losses": 1,
+			"draws": 0,
+			"total": 2,
+			"ratio": 0.5,
+			"username": "Triple H"
+		},
+		"200282974187421707": {
+			"wins": 1,
+			"losses": 3,
+			"draws": 0,
+			"total": 4,
+			"ratio": 0.25,
+			"username": "Ntp9401"
+		},
+		"235593018332282884": {
+			"wins": 4,
+			"losses": 1,
+			"draws": 0,
+			"total": 5,
+			"ratio": 0.8,
+			"username": "DavidTheClasher21"
+		},
+		"280078179454943235": {
+			"wins": 4,
+			"losses": 2,
+			"draws": 0,
+			"total": 6,
+			"ratio": 0.6666666666666666,
+			"username": "india gamerr"
+		},
+		"244272109579272192": {
+			"wins": 20,
+			"losses": 12,
+			"draws": 0,
+			"total": 32,
+			"ratio": 0.625,
+			"username": "NedIsCool"
+		},
+		"282980961862418444": {
+			"wins": 7,
+			"losses": 4,
+			"draws": 0,
+			"total": 11,
+			"ratio": 0.6363636363636364,
+			"username": "Spy727"
+		},
+		"154697207742857218": {
+			"wins": 21,
+			"losses": 14,
+			"draws": 0,
+			"total": 35,
+			"ratio": 1.5,
+			"username": "HZQ(The List.)"
+		},
+		"162559936247627776": {
+			"wins": 3,
+			"losses": 7,
+			"draws": 0,
+			"total": 10,
+			"ratio": 0.3,
+			"username": "Zinc"
+		},
+		"263992960927006720": {
+			"wins": 11,
+			"losses": 13,
+			"draws": 0,
+			"total": 24,
+			"ratio": 0.4583333333333333,
+			"username": "Doomsday"
+		},
+		"242295353188024321": {
+			"wins": 3,
+			"losses": 1,
+			"draws": 0,
+			"total": 4,
+			"ratio": 0.75,
+			"username": "Calibro"
+		},
+		"155631558718390273": {
+			"wins": 1,
+			"losses": 1,
+			"draws": 0,
+			"total": 2,
+			"ratio": 0.5,
+			"username": "ygamer"
+		},
+		"156273875062095872": {
+			"wins": 1,
+			"losses": 1,
+			"draws": 0,
+			"total": 2,
+			"ratio": 0.5,
+			"username": "Soo__hey"
+		},
+		"162478862914158592": {
+			"wins": 0,
+			"losses": 1,
+			"draws": 0,
+			"total": 1,
+			"ratio": 0,
+			"username": "A user"
+		},
+		"264767232259653643": {
+			"wins": 8,
+			"losses": 10,
+			"draws": 1,
+			"total": 19,
+			"ratio": 0.8,
+			"username": "TheMax | Beatdown Lover💚"
+		},
+		"158789958948225024": {
+			"wins": 11,
+			"losses": 4,
+			"draws": 0,
+			"total": 15,
+			"ratio": 0.7333333333333333,
+			"username": "Soap"
+		},
+		"263263239255621633": {
+			"wins": 1,
+			"losses": 2,
+			"draws": 0,
+			"total": 3,
+			"ratio": 0.3333333333333333,
+			"username": "Halo"
+		},
+		"211127913746137088": {
+			"wins": 1,
+			"losses": 1,
+			"draws": 0,
+			"total": 2,
+			"ratio": 0.5,
+			"username": "Henry"
+		},
+		"197691105142112258": {
+			"wins": 0,
+			"losses": 1,
+			"draws": 0,
+			"total": 1,
+			"ratio": 0,
+			"username": "Reach"
+		},
+		"240125631885606913": {
+			"wins": 6,
+			"losses": 3,
+			"draws": 0,
+			"total": 9,
+			"ratio": 0.6666666666666666,
+			"username": "CrashRocks1419"
+		},
+		"245742324297105428": {
+			"wins": 3,
+			"losses": 4,
+			"draws": 0,
+			"total": 7,
+			"ratio": 0.42857142857142855,
+			"username": "infectedsniper00"
+		},
+		"227456413029498880": {
+			"wins": 3,
+			"losses": 0,
+			"draws": 0,
+			"total": 3,
+			"ratio": 1,
+			"username": "monthescon"
+		},
+		"220398918519881730": {
+			"wins": 0,
+			"losses": 1,
+			"draws": 0,
+			"total": 1,
+			"ratio": 0,
+			"username": "Coolfood"
+		},
+		"147401491706150912": {
+			"wins": 4,
+			"losses": 6,
+			"draws": 0,
+			"total": 10,
+			"ratio": 0.6666666666666666,
+			"username": "τhε-ιοςτ"
+		},
+		"170271154303401985": {
+			"wins": 1,
+			"losses": 0,
+			"draws": 0,
+			"total": 1,
+			"ratio": 1,
+			"username": "PrinceLightSkin"
+		},
+		"191948420141809665": {
+			"wins": 0,
+			"losses": 0,
+			"draws": 1,
+			"total": 1,
+			"ratio": null,
+			"username": "!TheLegend27"
+		},
+		"208758957890732032": {
+			"wins": 24,
+			"losses": 25,
+			"draws": 0,
+			"total": 49,
+			"ratio": 0.96,
+			"username": "Kyle"
+		},
+		"185488796232581120": {
+			"wins": 4,
+			"losses": 5,
+			"draws": 0,
+			"total": 9,
+			"ratio": 0.8,
+			"username": "TheDurpyWeegee"
+		},
+		"255155531688181761": {
+			"wins": 12,
+			"losses": 13,
+			"draws": 0,
+			"total": 25,
+			"ratio": 0.9230769230769231,
+			"username": "dylanwang25"
+		},
+		"225541040700915712": {
+			"wins": 1,
+			"losses": 0,
+			"draws": 0,
+			"total": 1,
+			"ratio": null,
+			"username": "MHD_123"
+		},
+		"267339318874472458": {
+			"wins": 4,
+			"losses": 1,
+			"draws": 0,
+			"total": 5,
+			"ratio": 4,
+			"username": "Reyner"
+		},
+		"244642571127750656": {
+			"wins": 1,
+			"losses": 0,
+			"draws": 0,
+			"total": 1,
+			"ratio": null,
+			"username": "blindfunk"
+		}
+	},
 	"commands": {
 		"battle": {
-			"cooldown": false,
-			"roles_allowed": {},
-			"users_denied": {},
-			"channels_denied": {}
-		}	
-	}
+			"description": "`!battle @user`"
+		},
+		"battles": {
+			"description": "`!battles`,`!battles #`, `!battles @user`"
+		},
+		"protect": {
+			"description": "`!protect`"
+		},
+		"unprotect": {
+			"description": "`!unprotect`"
+		}
+	},
+	"towers": {
+		"king tower": {
+			"0": -439,
+			"1": 1201,
+			"level": 1,
+			"health": 1800
+		}
+	},
+	"cards": [
+		{
+			"name": "knight",
+			"type": "troop",
+			"rarity": "common",
+			"cost": 3,
+			"scenarios": [
+				{
+					"message": "$user played their $card into $opponent's undefended lane, getting off 2 strikes!",
+					"damage": 318,
+					"author": "harmiox"
+				},
+				{
+					"message": "$user played their $card but $opponent played his mini pekka and defended successfully.",
+					"damage": 0,
+					"author": "harmiox"
+				}
+			]
+		},
+		{
+			"name": "archers",
+			"type": "troop",
+			"rarity": "common",
+			"cost": 3,
+			"scenarios": [
+				{
+					"message": "$user played their $card into $opponent's left lane and gets off a bunch of damage!",
+					"damage": 162,
+					"author": "Gamerkid"
+				},
+				{
+					"message": "$user played their $card but $opponent played Log and defended Successfully!",
+					"damage": 0,
+					"author": "Gamerkid"
+				}
+			]
+		},
+		{
+			"name": "freeze spell",
+			"type": "spell",
+			"rarity": "common",
+			"cost": 4,
+			"scenarios": [
+				{
+					"message": "$user played their $card but it was wasted!",
+					"damage": 0,
+					"author": "deep"
+				}
+			]
+		},
+		{
+			"name": "spear goblins",
+			"type": "troop",
+			"rarity": "common",
+			"cost": 2,
+			"scenarios": [
+				{
+					"message": "$user played their $card but $opponent zapped it!",
+					"damage": 0,
+					"author": "deep"
+				},
+				{
+					"message": "$user played their $card and $opponent missed their Log",
+					"damage": 250,
+					"author": "deep"
+				}
+			]
+		},
+		{
+			"name": "bomber",
+			"type": "troop",
+			"rarity": "common",
+			"cost": 3,
+			"scenarios": [
+				{
+					"message": "$user played their $card and $opponent was distracted in the other lane!",
+					"damage": 542,
+					"author": "deep"
+				},
+				{
+					"message": "$user played their $card but $opponent fireballed it!",
+					"damage": 0,
+					"author": "archknight"
+				}
+			]
+		},
+		{
+			"name": "goblins",
+			"type": "troop",
+			"rarity": "common",
+			"cost": 2,
+			"scenarios": [
+				{
+					"message": "$user played their $card and $opponent ignored them!",
+					"damage": 318,
+					"author": "deep"
+				}
+			]
+		},
+		{
+			"name": "minion horde",
+			"type": "troop",
+			"rarity": "common",
+			"cost": 5,
+			"scenarios": [
+				{
+					"message": "$user played their $card and $opponent didn't have arrows in cycle!",
+					"damage": 504,
+					"author": "deep"
+				}
+			]
+		},
+		{
+			"name": "skeletons",
+			"type": "troop",
+			"rarity": "common",
+			"cost": 1,
+			"scenarios": [
+				{
+					"message": "$user played their $card but $opponent used an ice golem!",
+					"damage": 0,
+					"author": "deep"
+				},
+				{
+					"message": "$user played their $card and $opponent didn't react to it!",
+					"damage": 201,
+					"author": "deep"
+				}
+			]
+		},
+		{
+			"name": "minions",
+			"type": "troop",
+			"rarity": "common",
+			"cost": 3,
+			"scenarios": [
+				{
+					"message": "$user played their $card and $opponent decided not to defend!",
+					"damage": 252,
+					"author": "deep"
+				}
+			]
+		},
+		{
+			"name": "barbarians",
+			"type": "troop",
+			"rarity": "common",
+			"cost": 5,
+			"scenarios": [
+				{
+					"message": "$user played their $card but $opponent fireballed them!",
+					"damage": 0,
+					"author": "deep"
+				},
+				{
+					"message": "$user played their $card and $opponent didn't have their fireball in cycle!",
+					"damage": 636,
+					"author": "deep"
+				}
+			]
+		},
+		{
+			"name": "fire spirits",
+			"type": "troop",
+			"rarity": "common",
+			"cost": 2,
+			"scenarios": [
+				{
+					"message": "$user played their overleveled $card and $opponent ignored them!",
+					"damage": 273,
+					"author": "deep"
+				},
+				{
+					"message": "$user played their $card but $opponent zapped it!",
+					"damage": 0,
+					"author": "archknight"
+				}
+			]
+		},
+		{
+			"name": "royal giant",
+			"type": "troop",
+			"rarity": "common",
+			"cost": 6,
+			"scenarios": [
+				{
+					"message": "$user played their overleveled $card and $opponent wasn't able to defend it!",
+					"damage": 636,
+					"author": "deep"
+				},
+				{
+					"message": "$user played their $card but $opponent had an inferno tower!",
+					"damage": 0,
+					"author": "archknight"
+				}
+			]
+		},
+		{
+			"name": "elite barbarians",
+			"type": "troop",
+			"rarity": "common",
+			"cost": 6,
+			"scenarios": [
+				{
+					"message": "$user played their $card and $opponent couldn't distract them!",
+					"damage": 508,
+					"author": "deep"
+				},
+				{
+					"message": "$user played their $card but $opponent had an overleveled fireball!",
+					"damage": 0,
+					"author": "Archknight"
+				}
+			]
+		},
+		{
+			"name": "ice spirit",
+			"type": "troop",
+			"rarity": "common",
+			"cost": 1,
+			"scenarios": [
+				{
+					"message": "$user played their $card and $opponent decided not to defend it!",
+					"damage": 190,
+					"author": "deep"
+				},
+				{
+					"message": "$user played their $card but it was underleveled!",
+					"damage": 0,
+					"author": "archknight"
+				}
+			]
+		},
+		{
+			"name": "goblin gang",
+			"type": "troop",
+			"rarity": "common",
+			"cost": 3,
+			"scenarios": [
+				{
+					"message": "$user played their $card but $opponent played their log!",
+					"damage": 0,
+					"author": "Archknight"
+				},
+				{
+					"message": "$user played their $card and the $opponent was distracted!",
+					"damage": 353,
+					"author": "archknight"
+				}
+			]
+		},
+		{
+			"name": "arrows",
+			"type": "spell",
+			"rarity": "common",
+			"cost": 3,
+			"scenarios": [
+				{
+					"message": "$user played their $card but missed the tower!!",
+					"damage": 0,
+					"author": "Archknight"
+				},
+				{
+					"message": "$user played their $card and it hit the tower!",
+					"damage": 120,
+					"author": "deep"
+				}
+			]
+		},
+		{
+			"name": "zap",
+			"type": "spell",
+			"rarity": "common",
+			"cost": 2,
+			"scenarios": [
+				{
+					"message": "$user played their $card but missed!",
+					"damage": 0,
+					"author": "Archknight"
+				},
+				{
+					"message": "$user played their $card on $opponent's tower!",
+					"damage": 67,
+					"author": "deep"
+				}
+			]
+		},
+		{
+			"name": "mortar",
+			"type": "building",
+			"rarity": "common",
+			"cost": 4,
+			"scenarios": [
+				{
+					"message": "$user played their $card and $opponent didn't know how to defend! 2 rocks!",
+					"damage": 458,
+					"author": "deep"
+				},
+				{
+					"message": "$user played their $card but $opponent rocketed it!",
+					"damage": 0,
+					"author": "archknight"
+				}
+			]
+		},
+		{
+			"name": "ice wizard",
+			"type": "troop",
+			"rarity": "legendary",
+			"cost": 3,
+			"scenarios": [
+				{
+					"message": "$user played their $card and $opponent decided to let it hit the tower!",
+					"damage": 189,
+					"author": "deep"
+				},
+				{
+					"message": "$user played their $card and also placed a mini-tank in front of it!",
+					"damage": 433,
+					"author": "deep"
+				}
+			]
+		},
+		{
+			"name": "lumberjack",
+			"type": "troop",
+			"rarity": "legendary",
+			"cost": 4,
+			"scenarios": [
+				{
+					"message": "$user played their $card and $opponent didn't know how to defend, getting off 2 hits!",
+					"damage": 400,
+					"author": "deep"
+				},
+				{
+					"message": "$user played their $card and $opponent dropped an Ice Golem too far in the other lane!",
+					"damage": 600,
+					"author": "deep"
+				}
+			]
+		},
+		{
+			"name": "miner",
+			"type": "troop",
+			"rarity": "legendary",
+			"cost": 3,
+			"scenarios": [
+				{
+					"message": "$user played their $card and $opponent didn't predict the placement correctly!",
+					"damage": 320,
+					"author": "deep"
+				},
+				{
+					"message": "$user played their $card with a tank and $opponent wasn't able to defend!",
+					"damage": 640,
+					"author": "deep"
+				},
+				{
+					"message": "$user played their $card but $opponent correctly predicted it!",
+					"damage": 0,
+					"author": "archknight"
+				}
+			]
+		},
+		{
+			"name": "sparky",
+			"type": "troop",
+			"rarity": "legendary",
+			"cost": 6,
+			"scenarios": [
+				{
+					"message": "$user played their $card and it hit the tower once!!",
+					"damage": 1000,
+					"author": "deep"
+				},
+				{
+					"message": "$user played their $card but $opponent rocketed it!",
+					"damage": 0,
+					"author": "deep"
+				}
+			]
+		},
+		{
+			"name": "electro wizard",
+			"type": "troop",
+			"rarity": "legendary",
+			"cost": 4,
+			"scenarios": [
+				{
+					"message": "$user played their $card and it got off 3 hit!",
+					"damage": 600,
+					"author": "deep"
+				},
+				{
+					"message": "$user played their $card with a tank! It got off 5 hits!",
+					"damage": 1000,
+					"author": "deep"
+				},
+				{
+					"message": "$user played their $card but $opponent played their overleveled fireball on it!",
+					"damage": 0,
+					"author": "archknight"
+				}
+			]
+		},
+		{
+			"name": "princess",
+			"type": "troop",
+			"rarity": "legendary",
+			"cost": 3,
+			"scenarios": [
+				{
+					"message": "$user took advantage of an elixir lead and played $card, getting off 2 shots!",
+					"damage": 280,
+					"author": "deep"
+				},
+				{
+					"message": "$user played their card but it immediately got arrowed!",
+					"damage": 0,
+					"author": "Archknight"
+				}
+			]
+		},
+		{
+			"name": "dart goblin",
+			"type": "troop",
+			"rarity": "rare",
+			"cost": 3,
+			"scenarios": [
+				{
+					"message": "$user took advantage of an elixir lead and dropped $card, getting 4 shots off!",
+					"damage": 372,
+					"author": "deep"
+				},
+				{
+					"message": "$user played their $card behind a knight, getting 6 shots off!",
+					"damage": 558,
+					"author": "deep"
+				}
+			]
+		},
+		{
+			"name": "lightning",
+			"type": "spell",
+			"rarity": "epic",
+			"cost": 6,
+			"scenarios": [
+				{
+					"message": "$user used $card to get a positive elixir trade along with some tower damage",
+					"damage": 346,
+					"author": "deep"
+				},
+				{
+					"message": "$user played $card but missed by half a field",
+					"damage": 0,
+					"author": "archknight"
+				}
+			]
+		},
+		{
+			"name": "lavahound",
+			"type": "troop",
+			"rarity": "legendary",
+			"cost": 7,
+			"scenarios": [
+				{
+					"message": "$user played their $card but $opponent had an Inferno tower! But the Lavahound turned into Lavapups and got hits off!",
+					"damage": 345,
+					"author": "Gamerkid"
+				},
+				{
+					"message": "$user played their $card but it got killed by $opponent Minion Horde! ",
+					"damage": 0,
+					"author": "Gamerkid"
+				}
+			]
+		},
+		{
+			"name": "poison",
+			"type": "spell",
+			"rarity": "epic",
+			"cost": 4,
+			"scenarios": [
+				{
+					"message": "$user played $card on a pump and tower, scoring a positive elixir trade!",
+					"damage": 240,
+					"author": "deep"
+				}
+			]
+		},
+		{
+			"name": "executioner",
+			"type": "troop",
+			"rarity": "epic",
+			"cost": 5,
+			"scenarios": [
+				{
+					"message": "$user dropped their $card and $opponent ignored it!",
+					"damage": 532,
+					"author": "deep"
+				},
+				{
+					"message": "$user played their $card and managed to get a full strike off!",
+					"damage": 266,
+					"author": "deep"
+				}
+			]
+		},
+		{
+			"name": "fireball",
+			"type": "spell",
+			"rarity": "rare",
+			"cost": 4,
+			"scenarios": [
+				{
+					"message": "$user played their $card onto $opponent tower. SCORE!",
+					"damage": 221,
+					"author": "deep"
+				}
+			]
+		},
+		{
+			"name": "mini pekka",
+			"type": "troop",
+			"rarity": "rare",
+			"cost": 4,
+			"scenarios": [
+				{
+					"message": "$user dropped a $card and $opponent failed to kite it! ",
+					"damage": 572,
+					"author": "deep"
+				}
+			]
+		},
+		{
+			"name": "3 musketeers",
+			"type": "troop",
+			"rarity": "rare",
+			"cost": 9,
+			"scenarios": [
+				{
+					"message": "$user dropped their $card but $opponent used their Fireball and Zap to kill them! VALUE!",
+					"damage": 0,
+					"author": "Gamerkid"
+				},
+				{
+					"message": "$user dropped their $card and it deals EPIC DAMAGE!",
+					"damage": 1000,
+					"author": "archknight"
+				}
+			]
+		},
+		{
+			"name": "xbow",
+			"type": "building",
+			"rarity": "epic",
+			"cost": 6,
+			"scenarios": [
+				{
+					"message": "$user an $card onto $opponents left lane,and does INSANE DAMAGE!",
+					"damage": 1000,
+					"author": "Gamerkid"
+				},
+				{
+					"message": "$user played $card but it got destroyed by a rocket!",
+					"damage": 0,
+					"author": "Gamerkid"
+				}
+			]
+		},
+		{
+			"name": "musketeer",
+			"type": "troop",
+			"rarity": "rare",
+			"cost": 4,
+			"scenarios": [
+				{
+					"message": "$user dropped their $card and it gets 2 shots off!",
+					"damage": 392,
+					"author": "deep"
+				},
+				{
+					"message": "$user dropped their $card but $opponent played their overleveled fireball!",
+					"damage": 0,
+					"author": "archknight"
+				}
+			]
+		},
+		{
+			"name": "dark prince",
+			"type": "troop",
+			"rarity": "epic",
+			"cost": 4,
+			"scenarios": [
+				{
+					"message": "$user dropped their $card, and $opponent froze as he saw the Dark Prince's fierce face. Three hits",
+					"damage": 576,
+					"author": "prangles"
+				},
+				{
+					"message": "$user dropped their $card, but he fell off his charging pony! Oh well, no damage.",
+					"damage": 0,
+					"author": "prangles"
+				}
+			]
+		},
+		{
+			"name": "guards",
+			"type": "troop",
+			"rarity": "Epic",
+			"cost": 3,
+			"scenarios": [
+				{
+					"message": "$user plays $card and $opponent let it hit the tower!",
+					"damage": 200,
+					"author": "Gamerkid"
+				},
+				{
+					"message": "$user plays $card but $opponent plays a valkyrie! None of them survive",
+					"damage": 0,
+					"author": "Gamerkid"
+				}
+			]
+		},
+		{
+			"name": "goblin barrel",
+			"type": "spell",
+			"rarity": "epic",
+			"cost": 3,
+			"scenarios": [
+				{
+					"message": "$user threw a $card, and all three goblins got two stabs in! Much Wow!",
+					"damage": 636,
+					"author": "prangles"
+				}
+			]
+		},
+		{
+			"name": "golem",
+			"type": "troop",
+			"rarity": "epic",
+			"cost": 8,
+			"scenarios": [
+				{
+					"message": "$user dropped a $card, and the whole arena went silent. There was a loud rumble, and the beast awakened. The $card's rocky body trudged towards the tower, and violently punched it four times, dealing EPIC damage.",
+					"damage": 1000,
+					"author": "prangles"
+				},
+				{
+					"message": "$user played a $card. $opponent frantically tried to mirror-rocket the $card to death but it just didn't work. Two punches!.",
+					"damage": 518,
+					"author": "prangles"
+				}
+			]
+		},
+		{
+			"name": "witch",
+			"type": "troop",
+			"rarity": "epic",
+			"cost": 5,
+			"scenarios": [
+				{
+					"message": "$user played a $card. She ordered four of her skeletons to hit the tower twice.",
+					"damage": 536,
+					"author": "prangles"
+				},
+				{
+					"message": "$user played a $card. She used her magic staff to shoot the tower five times total!",
+					"damage": 345,
+					"author": "prangles"
+				}
+			]
+		},
+		{
+			"name": "elixir collector",
+			"type": "building",
+			"rarity": "rare",
+			"cost": 6,
+			"scenarios": [
+				{
+					"message": "$user placed down an $card. The $card built up so much elixir, that $user was able to build a 20+ elixir push and take 1200 health off $opponent's tower!",
+					"damage": 1200,
+					"author": "prangles"
+				}
+			]
+		},
+		{
+			"name": "battle ram",
+			"type": "troop",
+			"rarity": "rare",
+			"cost": 4,
+			"scenarios": [
+				{
+					"message": "BAM! $user played their $card, which not only slammed into $opponent's tower, but the barbarians inside also hit the tower once!",
+					"damage": 600,
+					"author": "prangles"
+				},
+				{
+					"message": "$user played a $card. The $card was distracted by a cannon, but one of the barbarians inside was able to hit the tower once.",
+					"damage": 159,
+					"author": "prangles"
+				}
+			]
+		},
+		{
+			"name": "mirror",
+			"type": "spell",
+			"rarity": "epic",
+			"cost": -1,
+			"scenarios": [
+				{
+					"message": "$user mirrored their hog rider, which allowed both hogs to get two hits! DOUBLE TROUBLE!",
+					"damage": 600,
+					"author": "prangles"
+				},
+				{
+					"message": "$user used a $card to create SIX spear goblins! They all threw their spears once.",
+					"damage": 300,
+					"author": "prangles"
+				}
+			]
+		},
+		{
+			"name": "hog rider",
+			"type": "troop",
+			"rarity": "rare",
+			"cost": 4,
+			"scenarios": [
+				{
+					"message": "HOG RIDAAAAAAH! $user dropped a $card, and his deafening screams distracted the other troops on the field, which allowed him to get three hammer whacks in!",
+					"damage": 792,
+					"author": "prangles"
+				},
+				{
+					"message": "$user dropped their $card, but as the $card leapt over the river, he accidentally slipped off his pig! Oh noes!",
+					"damage": 0,
+					"author": "prangles"
+				},
+				{
+					"message": "$user's smart $card intelligently maneuvered around $opponent's cannon, which allowed him to get a hammer whack in!",
+					"damage": 264,
+					"author": "prangles"
+				}
+			]
+		},
+		{
+			"name": "bowler",
+			"type": "troop",
+			"rarity": "epic",
+			"cost": 5,
+			"scenarios": [
+				{
+					"message": "$user dropped their $card, and it crushed $opponent's incoming skeleton army, allowing the $card to walk further land three hits on the tower!",
+					"damage": 717,
+					"author": "prangles"
+				},
+				{
+					"message": "$user dropped their $card but their finger slipped and the $card accidentally fell into the river! RIP in peace.",
+					"damage": 0,
+					"author": "prangles"
+				},
+				{
+					"message": "$user dropped their $card but $opponent quickly fireballed him. The $card only got one hit on the tower.",
+					"damage": 239,
+					"author": "prangles"
+				}
+			]
+		},
+		{
+			"name": "P.E.K.K.A",
+			"type": "troop",
+			"rarity": "epic",
+			"cost": 7,
+			"scenarios": [
+				{
+					"message": "$user played $card in the back and when the card got to the bridge, $user played Dank prince and Charming Prince behind the $card and gets of insane Damage!",
+					"damage": 1000,
+					"author": "Gamerkid"
+				},
+				{
+					"message": "$user plays their $card but $opponent plays Skarmy, and it gets eaten alive!",
+					"damage": 0,
+					"author": "Gamerkid"
+				}
+			]
+		},
+		{
+			"name": "Giant Skeleton",
+			"type": "troop",
+			"rarity": "Epic",
+			"cost": 6,
+			"scenarios": [
+				{
+					"message": "$user plays their $card but $opponent thought it sucked and left it alone which made the $card get 5 HITS, PLUS BOMB DAMAGE!",
+					"damage": 1600,
+					"author": "Gamerkid"
+				},
+				{
+					"message": "$user plays their $card but IT GETS DESTROYED BY the SIX BLUE BROTHERS! aka Minion Horde and gets instanly Killed!",
+					"damage": 0,
+					"author": "Gamerkid"
+				}
+			]
+		},
+		{
+			"name": "Graveyard",
+			"type": "spell",
+			"rarity": "legendary",
+			"cost": 5,
+			"scenarios": [
+				{
+					"message": "$user plays their $card on $opponent's tower, but $opponent DECIDES TO LEAVE IT UNDEFENDED!",
+					"damage": 500,
+					"author": "Gamerkid"
+				},
+				{
+					"message": "$user plays their $card but $opponent has Minions and defends them but still gets some damage on tower!",
+					"damage": 200,
+					"author": "Gamerkid"
+				}
+			]
+		},
+		{
+			"name": "Prince",
+			"type": "troop",
+			"rarity": "Epic",
+			"cost": 5,
+			"scenarios": [
+				{
+					"message": "$user played their $card and the $card got 3 strikes off!",
+					"damage": 1200,
+					"author": "archknight"
+				},
+				{
+					"message": "$user played their $card and the $card got 2 strikes off!",
+					"damage": 800,
+					"author": "archknight"
+				}
+			]
+		},
+		{
+			"name": "Balloon",
+			"type": "troop",
+			"rarity": "Epic",
+			"cost": 5,
+			"scenarios": [
+				{
+					"message": "$user played their $card and the $card got off a strike",
+					"damage": 700,
+					"author": "archknight"
+				},
+				{
+					"message": "$user played their $card and the $card got off two strikes! ",
+					"damage": 1400,
+					"author": "archknight"
+				}
+			]
+		},
+		{
+			"name": "Giant",
+			"type": "troop",
+			"rarity": "rare",
+			"cost": 5,
+			"scenarios": [
+				{
+					"message": "$user played their $card and the $card got off three strikes!",
+					"damage": 300,
+					"author": "archknight"
+				},
+				{
+					"message": "$user played their $card and the $card got off four strikes!",
+					"damage": 600,
+					"author": "archknight"
+				}
+			]
+		},
+		{
+			"name": "Rocket",
+			"type": "spell",
+			"rarity": "Rare",
+			"cost": 6,
+			"scenarios": [
+				{
+					"message": "$user played their $card. Direct hit!",
+					"damage": 493,
+					"author": "archknight"
+				}
+			]
+		},
+		{
+			"name": "inferno dragon",
+			"type": "troop",
+			"rarity": "legendary",
+			"cost": 4,
+			"scenarios": [
+				{
+					"message": "$user played their $card. It locked onto the tower! MAJOR DAMAGE!",
+					"damage": 1200,
+					"author": "prangles"
+				}
+			]
+		},
+		{
+			"name": " furnace",
+			"type": "building",
+			"rarity": "rare",
+			"cost": 4,
+			"scenarios": [
+				{
+					"message": "$user played their $card. Four waves of spirits spawned.",
+					"damage": 600,
+					"author": "prangles"
+				}
+			]
+		},
+		{
+			"name": "Rage",
+			"type": "spell",
+			"rarity": "Epic",
+			"cost": 2,
+			"scenarios": [
+				{
+					"message": "$user played their $card and it raged some minions who were at the tower!",
+					"damage": 200,
+					"author": "archknight"
+				}
+			]
+		},
+		{
+			"name": "the log",
+			"type": "spell",
+			"rarity": "legendary",
+			"cost": 2,
+			"scenarios": [
+				{
+					"message": "$user dropped a $card! It crushed an incoming goblin gang and clipped the tower!",
+					"damage": 115,
+					"author": "prangles"
+				},
+				{
+					"message": "$user played a $card. The $card was distracted by a cannon, but one of the barbarians inside was able to hit the tower once.",
+					"damage": 159,
+					"author": "prangles"
+				}
+			]
+		},
+		{
+			"name": "mega minion",
+			"type": "troop",
+			"rarity": "rare",
+			"cost": 3,
+			"scenarios": [
+				{
+					"message": "$user dropped their $card, and it slowly flew over to $opponent's tower, shooting it twice.",
+					"damage": 516,
+					"author": "prangles"
+				},
+				{
+					"message": "$user dropped their $card, and an ice golem was tanking for the $card. FIVE HITS!",
+					"damage": 1290,
+					"author": "prangles"
+				},
+				{
+					"message": "$user deployed their $card, but $opponent used a lightning to take out the $card and hit an elixir collector. Positive elixir trade! RIP $card.",
+					"damage": 0,
+					"author": "prangles"
+				}
+			]
+		},
+		{
+			"name": "Tornado",
+			"type": "spell",
+			"rarity": "Epic",
+			"cost": 3,
+			"scenarios": [
+				{
+					"message": "$user played their $card but it was wasted!",
+					"damage": 0,
+					"author": "archknight"
+				}
+			]
+		},
+		{
+			"name": "Clone",
+			"type": "spell",
+			"rarity": "Epic",
+			"cost": 3,
+			"scenarios": [
+				{
+					"message": "$user played their $card and cloned some spear goblins that were on the field!",
+					"damage": 200,
+					"author": "archknight"
+				}
+			]
+		},
+		{
+			"name": "skeleton army",
+			"type": "troop",
+			"rarity": "epic",
+			"cost": 3,
+			"scenarios": [
+				{
+					"message": "$user played their $card and it swarmed the tower and did some major damage!",
+					"damage": 700,
+					"author": "prangles"
+				}
+			]
+		},
+		{
+			"name": "Goblin Hut",
+			"type": "Troop",
+			"rarity": "Rare",
+			"cost": 5,
+			"scenarios": [
+				{
+					"message": "$user played their $card and five spear goblins spawned!",
+					"damage": 250,
+					"author": "archknight"
+				},
+				{
+					"message": "$user played their $card and four spear goblins spawned!",
+					"damage": 200,
+					"author": "archknight"
+				}
+			]
+		},
+		{
+			"name": "Baby Dragon",
+			"type": "troop",
+			"rarity": "Epic",
+			"cost": 4,
+			"scenarios": [
+				{
+					"message": "$user played their $card and $card got three strikes off!",
+					"damage": 399,
+					"author": "arch"
+				},
+				{
+					"message": "$user played their $card and $card got four strikes off!",
+					"damage": 532,
+					"author": "arch"
+				}
+			]
+		},
+		{
+			"name": "ice golem",
+			"type": "troop",
+			"rarity": "rare",
+			"cost": 2,
+			"scenarios": [
+				{
+					"message": "$user played their $card and it struck the tower five times!",
+					"damage": 350,
+					"author": "prangles"
+				},
+				{
+					"message": "$user played their $card and the $card tanked for some spear goblins. That's a lot of damage done!",
+					"damage": 450,
+					"author": "prangles"
+				}
+			]
+		},
+		{
+			"name": "Valkyrie",
+			"type": "troop",
+			"rarity": "rare",
+			"cost": 4,
+			"scenarios": [
+				{
+					"message": "$user played their $card and $card got three strikes off!",
+					"damage": 450,
+					"author": "archknight"
+				},
+				{
+					"message": "$user played their $card and $card got four strikes off!",
+					"damage": 600,
+					"author": "archknight"
+				}
+			]
+		},
+		{
+			"name": "Wizard",
+			"type": "troop",
+			"rarity": "Rare",
+			"cost": 5,
+			"scenarios": [
+				{
+					"message": "$user played their $card and $card got two strikes off!",
+					"damage": 240,
+					"author": "archknight"
+				},
+				{
+					"message": "",
+					"damage": 0,
+					"author": "archknight"
+				}
+			]
+		}
+	]
 }

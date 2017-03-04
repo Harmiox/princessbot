@@ -1,189 +1,99 @@
 {
-	"gemCreditsValue": 18182,
-	"gemDollarValue": 110,
-	"rarities": {
-		"Common": {
-			"xp": 500,
-			"freechest": 0
-		},
-		"Rare": {
-			"xp": 1500,
-			"freechest": 0
-		},
-		"Epic": {
-			"xp": 4500,
-			"freechest": 0
-		},
-		"Legendary": {
-			"xp": 13500,
-			"freechest": 0
-		},
-		"Hero": {
-			"xp": 43500,
-			"freechest": 0
-		}
-	},
-	"chests": {
-		"Wooden Chest": 0,
-		"Silver Chest": 25,
-		"Gold Chest": 50,
-		"Giant Chest": 75,
-		"Epic Chest": 100,
-		"Super Magical Chest": 200,
-		"Legendary Chest": 500
-	},
 	"commands": {
 		"chest": {
-			"cooldown": false,
-			"roles_allowed": {},
-			"users_denied": {},
-			"channels_denied": {}
+			"description": ""
 		},
 		"chest open": {
-			"cooldown": false,
-			"roles_allowed": {},
-			"users_denied": {},
-			"channels_denied": {}
+			"description": ""
 		},
 		"chest transfer": {
-			"cooldown": false,
-			"roles_allowed": {},
-			"users_denied": {},
-			"channels_denied": {}
+			"description": ""
 		},
 		"chest set": {
-			"cooldown": false,
-			"roles_allowed": {},
-			"users_denied": {},
-			"channels_denied": {}
+			"description": ""
 		},
 		"chest add": {
-			"cooldown": false,
-			"roles_allowed": {},
-			"users_denied": {},
-			"channels_denied": {}
+			"description": ""
 		},
-		"chest delete": {
-			"cooldown": false,
-			"roles_allowed": {},
-			"users_denied": {},
-			"channels_denied": {}
+		"chest reset": {
+			"description": ""
 		},
 		"freechest": {
-			"cooldown": false,
-			"roles_allowed": {},
-			"users_denied": {},
-			"channels_denied": {}
+			"description": ""
 		}
 	},
-	"vaults": {
-		"228781414986809344": {
-			"amount": 81
-		},
-		"145215019288756224": {
-			"amount": 17
-		},
-		"116688151954718721": {
-			"amount": 0
-		},
-		"185122850284371968": {
-			"amount": 8
-		},
-		"195612311174643713": {
-			"amount": 13
-		},
-		"248151431020806144": {
-			"amount": 2
-		},
-		"220398918519881730": {
-			"amount": 1000
-		},
-		"178602048831488000": {
-			"amount": 6
-		},
-		"275493777538285568": {
-			"amount": 4
-		},
-		"128296384200835073": {
-			"amount": 0
-		},
-		"136867316662009856": {
-			"amount": 0
-		},
-		"180815234183856130": {
-			"amount": 2
-		},
-		"241545450828595200": {
-			"amount": 2
-		},
-		"263992960927006720": {
-			"amount": 14
-		},
-		"255155531688181761": {
-			"amount": 2
-		},
-		"198521570233286657": {
-			"amount": 2
-		},
-		"206183787917344770": {
-			"amount": 0
-		},
-		"138392077405782017": {
-			"amount": 4
-		},
-		"242295353188024321": {
-			"amount": 4
-		},
-		"267339318874472458": {
-			"amount": 2
-		},
-		"230608632973099009": {
-			"amount": 2
-		},
-		"123068358986825729": {
-			"amount": 0
-		},
-		"211562278800195584": {
-			"amount": 8
-		},
-		"199151432522399744": {
-			"amount": 6
-		},
-		"109512286506319872": {
-			"amount": 0
-		},
-		"197691105142112258": {
-			"amount": 2
-		},
-		"244272109579272192": {
-			"amount": 2
-		},
-		"236222542707294208": {
-			"amount": 2
-		},
-		"156273875062095872": {
-			"amount": 2
-		},
-		"143860436901691393": {
-			"amount": 2
-		},
-		"152714232838881281": {
-			"amount": 2
-		},
-		"214822211574431744": {
-			"amount": 2
-		},
-		"263263239255621633": {
-			"amount": 2
-		},
-		"248088001966637056": {
-			"amount": 2
-		},
-		"193760280231018497": {
-			"amount": 2
-		},
-		"226085283341271040": {
-			"amount": 0
+	"guilds": {
+		"273773402572062721": {
+			"gemCreditsValue": 18182,
+			"gemDollarValue": 110,
+			"levels": {
+				"1": {
+					"xp": 500,
+					"freechest": 0
+				},
+				"2": {
+					"xp": 500,
+					"freechest": 0
+				},
+				"3": {
+					"xp": 500,
+					"freechest": 0
+				},
+				"4": {
+					"xp": 500,
+					"freechest": 0
+				},
+				"5": {
+					"xp": 500,
+					"freechest": 0
+				},
+				"6": {
+					"xp": 500,
+					"freechest": 0
+				},
+				"7": {
+					"xp": 500,
+					"freechest": 0
+				},
+				"8": {
+					"xp": 500,
+					"freechest": 0
+				},
+				"9": {
+					"xp": 500,
+					"freechest": 0
+				},
+				"10": {
+					"xp": 500,
+					"freechest": 0
+				},
+				"11": {
+					"xp": 500,
+					"freechest": 0
+				},
+				"12": {
+					"xp": 500,
+					"freechest": 0
+				},
+				"13": {
+					"xp": 500,
+					"freechest": 0
+				}
+			},
+			"chests": {
+				"Wooden Chest": 0,
+				"Silver Chest": 25,
+				"Gold Chest": 50,
+				"Giant Chest": 75,
+				"Epic Chest": 100,
+				"Super Magical Chest": 200,
+				"Legendary Chest": 500
+			},
+			"vaults": {
+				"228781414986809344": {
+					"balance": 6
+				}
+			}
 		}
 	}
 }

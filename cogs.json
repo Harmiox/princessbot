@@ -1,7 +1,16 @@
 {
-	"cogs": {
-		"economy.js": true,
-		"permissions.js": true,
-		"battles.js": true
+	"guilds": {
+		"273773402572062721": {
+			"cogs": {
+				"permissions.js": true,
+				"battles.js": true,
+				"economy.js": true
+			}
+		},
+		"285214134931292162": {
+			"cogs": {
+				"permissions.js": true
+			}
+		}
 	}
 }
