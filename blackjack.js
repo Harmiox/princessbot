@@ -13,16 +13,20 @@ function getCommands() {
 //TODO Functions
 
 function getRandomInt(min, max) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min)) + min;
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min)) + min;
 }
 
 Function drawHand() {
     var cards = new Array("A", "J", "Q", "K");
-    
 
-    return "A" + " " + "A";
+    var num = getRandomInt(1, 13);
+    if (num >= 5 || num <= 13) {
+        return (num-3) + "";
+    } else {
+        return cards[num];    
+    }
 }
 
 var blackjack = function () {
@@ -41,7 +45,7 @@ var blackjack = function () {
                 .then(function (m) {
                     //m is the messages caught by filter
                     var stringResponse = m.content;
-                    var userBet = parseInt(stringResponse); 
+                    var userBet = parseInt(stringResponse);
 
                     message.channel.sendMessage("Insert hand here");
                 })
