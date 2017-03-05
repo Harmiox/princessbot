@@ -18,12 +18,12 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min)) + min;
 }
 
-Function drawHand() {
+function drawHand() {
     var cards = new Array("A", "J", "Q", "K");
 
-    var num = getRandomInt(1, 13);
-    if (num >= 5 || num <= 13) {
-        return (num-3) + "";
+    var num = getRandomInt(0, 12);
+    if (num >= 4 || num <= 12) {
+        return (num-2) + "";
     } else {
         return cards[num];    
     }
