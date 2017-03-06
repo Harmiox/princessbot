@@ -21,7 +21,7 @@ function getRandomInt(min, max) {
 function drawHand() {
     var cards = new Array("A", "J", "Q", "K");
 
-    var num = getRandomInt(0, 12);
+    var num = getRandomInt(0, 13);
     if (num >= 4 || num <= 12) {
         return (num-2) + "";
     } else {
